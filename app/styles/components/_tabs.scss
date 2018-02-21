@@ -1,8 +1,8 @@
 // Tabs
 
 .tabs {
-  @include display(flex);
-  @include flex-wrap(wrap);
+  display: flex;
+  flex-wrap: wrap;
 
   margin-bottom: $base-spacing;
 }
@@ -63,7 +63,7 @@
 }
 
 .vertical-tabs {
-  @include flex-direction(column);
+  flex-direction: column;
 
   .tab {
     margin-bottom: $small-spacing / 2;

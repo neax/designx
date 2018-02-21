@@ -77,13 +77,13 @@
 .tooltip-down,
 .tooltip-up {
   &::after {
-    @include transform(translateX(50%));
+    transform: translateX(50%);
   }
 }
 
 .tooltip-left {
   &::after {
-    @include transform(translateY(50%));
+    transform: translateY(50%);
 
     bottom: 50%;
     margin-right: 5px;
@@ -101,7 +101,7 @@
 
 .tooltip-right {
   &::after {
-    @include transform(translateY(50%));
+    transform: translateY(50%);
 
     bottom: 50%;
     left: 100%;

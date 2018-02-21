@@ -30,7 +30,7 @@ p {
 }
 
 a {
-  @include transition(color $base-duration $base-timing);
+  transition: color $base-duration $base-timing;
 
   color: $action-color;
   text-decoration: none;

@@ -40,9 +40,9 @@ textarea {
 
 #{$all-text-inputs},
 select [multiple] {
-  @include appearance(none);
-  @include box-sizing(border-box);
-  @include transition(border-color $base-duration $base-timing);
+  appearance: none;
+  box-sizing: border-box;
+  transition: border-color $base-duration $base-timing;
 
   background-color: $base-background-color;
   border: $base-border;
@@ -96,8 +96,8 @@ textarea {
 }
 
 select {
-  @include box-sizing(border-box);
-  @include transition(border-color $base-duration $base-timing);
+  box-sizing: border-box;
+  transition: border-color $base-duration $base-timing;
 
   background-color: $base-background-color;
   border: $base-border;
@@ -113,9 +113,9 @@ select {
 }
 
 .input-icon-addon {
-  @include display(flex);
+  display: flex;
   @include border-left-radius($base-border-radius);
-  @include align-items(center);
+  align-items: center;
 
   background-color: lighten($light-gray, 7.25%);
   border: 1px solid $light-gray;
@@ -132,7 +132,7 @@ select {
 }
 
 .input-addon {
-  @include display(flex);
-  @include flex(1 1 auto);
+  display: flex;
+  flex: 1 1 auto;
   @include border-left-radius(0 !important);
 }

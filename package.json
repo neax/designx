@@ -24,7 +24,7 @@
     "babel-preset-env": "^1.6.1",
     "bootstrap": "^4.0.0",
     "bourbon": "^5.0.0",
-    "bourbon-neat": "^1.9.0",
+    "bourbon-neat": "^2.1.0",
     "brunch": "^2.10.12",
     "csswring": "^6.0.3",
     "jquery": "^3.3.1",

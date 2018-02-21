@@ -32,7 +32,7 @@
 
 // Text Colors
 
-@each $color in join($grayscale-colors, $colors) {
+@each $color in map-merge($grayscale-colors, $colors) {
   $name: nth($color, 1);
   $color: nth($color, 2);
 
@@ -43,7 +43,7 @@
 
 // Background Colors
 
-@each $name, $values in join($grayscale-colors, $colors) {
+@each $name, $values in map-merge($grayscale-colors, $colors) {
   $background-color: nth($values, 1);
   $color: nth($values, 2);
 

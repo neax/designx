@@ -1,9 +1,9 @@
 // Cards
 
 .card {
-  @include display(flex);
-  @include flex-direction(column);
-  @include word-wrap(break-word);
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
 
   background-clip: border-box;
   border: 1px solid $light-gray;
@@ -18,7 +18,7 @@
 
 // Cards Colors
 
-@each $name, $values in join($grayscale-colors, $colors) {
+@each $name, $values in map-merge($grayscale-colors, $colors) {
   $background-color: nth($values, 1);
   $color: nth($values, 2);
 
@@ -47,7 +47,7 @@
 
 .card-content {
   @include padding($base-spacing);
-  @include flex(1 1 auto);
+  flex: 1 1 auto;
 }
 
 .card-links {

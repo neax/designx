@@ -1,6 +1,6 @@
 .overlay-modal {
   @include position(fixed, 0);
-  @include transition(opacity 500ms);
+  transition: opacity 500ms;
   @include alpha-attribute('background-color', rgba($black, .7), transparent);
 
   display: none;
@@ -10,7 +10,7 @@
 .modal {
   @include margin($base-spacing * 2 auto);
   @include padding($small-spacing * 3);
-  @include transition(all 5s ease-in-out);
+  transition: all 5s ease-in-out;
   @include grid-media($small-screen-grid) {
     width: 29rem;
   }
@@ -25,7 +25,7 @@
 
 .modal-close {
   @include position(absolute, $base-spacing / 1.5 $base-spacing / 1.5 null null);
-  @include transition(all 200ms ease-in-out);
+  transition: all 200ms ease-in-out;
 
   color: $medium-gray;
   cursor: pointer;
@@ -44,8 +44,8 @@
 
   #{$all-buttons},
   .button {
-    margin-bottom: 0;
     margin-right: $small-spacing / 2;
+    margin-bottom: 0;
 
     &:last-child {
       margin-right: 0;

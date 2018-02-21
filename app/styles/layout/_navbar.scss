@@ -55,8 +55,8 @@ nav {
 }
 
 .nav-right {
-  @include display(flex);
-  @include flex-direction(row);
+  display: flex;
+  flex-direction: row;
 
   float: right;
 
