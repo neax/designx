@@ -1,0 +1,10 @@
+// Footer
+
+footer {
+  @include margin(null null $base-spacing);
+  @include padding($base-spacing);
+
+  color: lighten($medium-gray, 5%);
+  font-size: 80%;
+  text-align: center;
+}

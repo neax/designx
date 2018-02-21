@@ -1,0 +1,15 @@
+@import 'config';
+@import 'vendors/vendors';
+@import 'base/base';
+@import 'utils/utils';
+@import 'components/components';
+@import 'helpers/helpers';
+@import 'layout/layout';
+
+
+// Pages
+
+// Uncomment to import all pages
+// @import 'pages/pages';
+
+@import 'pages/pages';

@@ -1,0 +1,54 @@
+.overlay-modal {
+  @include position(fixed, 0);
+  @include transition(opacity 500ms);
+  @include alpha-attribute('background-color', rgba($black, .7), transparent);
+
+  display: none;
+  z-index: 99;
+}
+
+.modal {
+  @include margin($base-spacing * 2 auto);
+  @include padding($small-spacing * 3);
+  @include transition(all 5s ease-in-out);
+  @include grid-media($small-screen-grid) {
+    width: 29rem;
+  }
+
+  background-color: $white;
+  border-radius: $base-border-radius;
+  max-height: 100%;
+  overflow: auto;
+  position: relative;
+  width: 90%;
+}
+
+.modal-close {
+  @include position(absolute, $base-spacing / 1.5 $base-spacing / 1.5 null null);
+  @include transition(all 200ms ease-in-out);
+
+  color: $medium-gray;
+  cursor: pointer;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.modal-content {
+  max-height: 30%;
+  padding-top: $small-spacing;
+}
+
+.modal-buttons {
+  margin-top: $base-spacing;
+  text-align: right;
+
+  #{$all-buttons},
+  .button {
+    margin-bottom: 0;
+    margin-right: $small-spacing / 2;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

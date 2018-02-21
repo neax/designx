@@ -1,0 +1,94 @@
+// Utilities
+
+// Floats
+
+.left { @include float-left; }
+.right { @include float-right; }
+
+// Text Alignment
+
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-justify { text-align: justify !important; }
+.text-nowrap { white-space: nowrap !important; }
+.text-truncate { @include text-truncate; }
+
+// Text Transform
+
+.text-lowercase { text-transform: lowercase !important; }
+.text-uppercase { text-transform: uppercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+// Font weight and italics
+
+.font-light { font-weight: $font-light; }
+.font-regular { font-weight: $font-regular; }
+.font-medium { font-weight: $font-medium; }
+.font-semi-bold { font-weight: $font-semi-bold; }
+.font-bold { font-weight: $font-bold; }
+.font-extra-bold { font-weight: $font-extra-bold; }
+.font-italic { font-style: italic; }
+
+// Text Colors
+
+@each $color in join($grayscale-colors, $colors) {
+  $name: nth($color, 1);
+  $color: nth($color, 2);
+
+  .color-#{$name} {
+    color: nth($color, 1);
+  }
+}
+
+// Background Colors
+
+@each $name, $values in join($grayscale-colors, $colors) {
+  $background-color: nth($values, 1);
+  $color: nth($values, 2);
+
+  .background-#{$name} {
+    background-color: $background-color;
+    color: $color;
+  }
+}
+
+// Display
+
+.hidden {
+  display: none;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+// Others
+
+.background-cover-center {
+  background-position: center;
+  background-size: cover;
+}
+
+.table {
+  @include padding($base-spacing null);
+}
+
+.table-title {
+  @include margin(null null $base-spacing);
+
+  font-weight: bold;
+  text-align: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.rounded {
+  border-radius: $base-border-radius;
+}
+
+.circle {
+  border-radius: 50%;
+}

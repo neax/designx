@@ -1,0 +1,42 @@
+figure {
+  margin: 0;
+
+  &.caption-hover {
+    position: relative;
+
+    figcaption {
+      @include padding($small-spacing / 2 $small-spacing);
+      @include position(absolute, null 0 0 0);
+
+      background: rgba($black, .3);
+      color: $white;
+      display: none;
+    }
+
+    img {
+      display: block;
+    }
+
+    &:hover {
+      figcaption {
+        display: block;
+      }
+    }
+  }
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+
+  &.cover {
+    object-fit: cover;
+  }
+}
+
+figcaption {
+  color: $medium-gray;
+  font-size: 95%;
+  text-align: center;
+}
