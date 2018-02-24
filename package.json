@@ -35,6 +35,7 @@
     "postcss-cssnext": "^3.1.0",
     "sass-brunch": "^2.10.4",
     "spostcss-brunch": "^1.0.1",
+    "uglify-js-brunch": "^2",
     "vue": "^2.5.13",
     "vue-brunch": "^2.0.1",
     "vue-router": "^3.0.1"
