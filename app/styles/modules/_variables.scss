@@ -1,0 +1,24 @@
+// Grids
+$grid-gap: 20px;
+
+// Main
+$main-width: 1020px;
+
+// Colors
+$colors: (
+  'blue': ($blue, $white),
+  'green': ($green, $white),
+  'red': ($red, $white),
+  'orange': ($orange, $white),
+  'purple': ($purple, $white),
+  'sky-blue': ($sky-blue, $white),
+  'yellow': ($yellow, $dark-gray),
+  'brown': ($brown, $white),
+  'gray': ($dark-gray, $white),
+);
+
+$grayscale-colors: (
+  'dark-gray': ($dark-gray, $white),
+  'medium-gray': ($medium-gray, $white),
+  'light-gray': ($light-gray, $dark-gray),
+);

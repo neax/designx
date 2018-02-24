@@ -1,11 +1,16 @@
 exports.files = {
   javascripts: {
-    joinTo: {
-      'vendor.js': /^(?!app)/,
-      'app.js': /^app/
-    }
+    entryPoints: {
+       'app/scripts/app.js': {
+         'js/app.js': /^app\/scripts/,
+         'js/vendor.js': /^(?!app\/scripts)/
+       }
+     },
   },
-  stylesheets: {joinTo: {'app.css': 'app/styles/app.scss'}}
+  stylesheets: {joinTo: {'app.css': 'app/styles/app.scss'}},
+  templates: {
+    joinTo: 'js/app.js'
+  }
 };
 
 exports.plugins = {
@@ -18,16 +23,9 @@ exports.plugins = {
         )
     }
   }
+  // autoReload: {enabled: true}
   // postcss: {processors: [
   //   require('postcss-cssnext')('last 2 versions'),
   //   require('csswring')()
   // ]}
 };
-
-exports.npm = {
-  globals: {
-    $: 'jquery',
-    jQuery: 'jquery',
-    Popper: 'popper.js'
-  }
-}

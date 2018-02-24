@@ -4,7 +4,7 @@ $medium-screen: 720px;
 $large-screen: 960px;
 
 // Typography
-$base-font-family: 'proximasoft', sans serif;
+$base-font-family: 'proximasoft', sans-serif;
 $code-font-family: $base-font-family;
 $heading-font-family: $base-font-family;
 
@@ -85,15 +85,6 @@ $badge-point: '\f111' !default;
 
 // Breadcrumbs
 $breadcrumb-divider: '\f105' !default;
-
-// Alerts
-$alerts-colors: (
-  'alert-debug': ($yellow, $dark-gray),
-  'alert-info': ($purple, $white),
-  'alert-success': ($green, $white),
-  'alert-warning': ($orange, $white),
-  'alert-error': ($red, $white),
-);
 
 $alert-close-icon: '\f00d' !default;
 

@@ -22,6 +22,7 @@
     "auto-reload-brunch": "^2.7.1",
     "babel-brunch": "^6.1.1",
     "babel-preset-env": "^1.6.1",
+    "babel-runtime": "^6.26.0",
     "bootstrap": "^4.0.0",
     "bourbon": "^5.0.0",
     "bourbon-neat": "^2.1.0",
@@ -33,6 +34,12 @@
     "postcss": "^6.0.18",
     "postcss-cssnext": "^3.1.0",
     "sass-brunch": "^2.10.4",
-    "spostcss-brunch": "^1.0.1"
+    "spostcss-brunch": "^1.0.1",
+    "vue": "^2.5.13",
+    "vue-brunch": "^2.0.1",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0"
   }
 }

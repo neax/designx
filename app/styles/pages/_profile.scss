@@ -12,7 +12,8 @@
 }
 
 .profile-avatar-img {
-  @extend .background-cover-center;
+  background-position: center;
+  background-size: cover;
 
   cursor: pointer;
   height: 0;

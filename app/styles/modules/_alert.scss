@@ -1,0 +1,46 @@
+// Alerts
+.alert {
+  @include padding($small-spacing / 1.5);
+
+  border-radius: $base-border-radius;
+  color: $white;
+  font-weight: $font-semi-bold;
+  margin-bottom: $base-spacing;
+  text-align: center;
+  width: 100%;
+  z-index: 99;
+
+  &.fixed {
+    @include position(fixed, null 0 0 0);
+
+    border-radius: 0;
+  }
+
+  // Alerts colors
+  @each $name, $values in $colors {
+    $background-color: nth($values, 1);
+    $color: nth($values, 2);
+
+    &.#{$name} {
+      background-color: $background-color;
+      color: $color;
+    }
+  }
+}
+
+.alert-close {
+  cursor: pointer;
+  float: right;
+  line-height: $base-line-height;
+  margin-right: $small-spacing / 2;
+
+  // Alert colors close icon
+
+  @each $name, $values in $colors {
+    $color: nth($values, 2);
+
+    &.#{$name} {
+      color: $color;
+    }
+  }
+}
