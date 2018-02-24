@@ -1,0 +1,59 @@
+// Badges
+
+.badge {
+  @include padding($small-spacing / 2 $small-spacing);
+
+  background-color: darken($white, 5);
+  border-radius: $base-border-radius;
+  display: inline-block;
+  font-size: $badge-font-size;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+
+  &:empty {
+    display: none;
+  }
+
+  &.positive,
+  &.negative {
+    @include padding(0);
+    @include position(relative, null);
+
+    background-color: $white;
+
+    &::before {
+      @include position(absolute, 0 -13px 0 null);
+
+      content: '#{$badge-point}';
+      font-family: $font-awesome-solid;
+      font-size: 7px;
+      line-height: 2;
+      vertical-align: middle;
+    }
+  }
+
+  &.positive {
+    &::before {
+      color: $green;
+    }
+  }
+
+  &.negative {
+    &::before {
+      color: $red;
+    }
+  }
+
+  // Badge colors
+
+  @each $name, $values in $colors {
+    $background-color: nth($values, 1);
+    $color: nth($values, 2);
+
+    &.#{$name} {
+      background-color: $background-color;
+      color: $color;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+table {
+  border-collapse: collapse;
+  // margin: $small-spacing 0;
+  table-layout: auto;
+  width: 100%;
+
+  &.striped {
+    tbody {
+      tr:nth-child(odd) {
+        > td {
+          background-color: darken($white, 2);
+        }
+      }
+
+      tr:hover > td,
+      tr.active {
+        background-color: darken($white, 3);
+      }
+    }
+  }
+}
+
+th {
+  border-bottom: 1px solid shade($base-border-color, 5%);
+  font-weight: 600;
+  padding: $small-spacing * 1.25 $small-spacing / 2;
+  text-align: left;
+}
+
+td {
+  padding: $small-spacing * 1.25 $small-spacing / 2;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+tr:hover > td,
+tr.active {
+  background-color: darken($white, 2);
+}
