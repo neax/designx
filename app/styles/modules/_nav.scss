@@ -9,7 +9,7 @@ nav {
   text-align: center;
   width: 100%;
 
-  @include grid-media($medium-screen-grid) {
+  @media only screen and (min-width:720px) {
     text-align: inherit;
   }
 
@@ -61,7 +61,7 @@ nav {
       display: inline-block;
     }
 
-    @include grid-media($designup-nav) {
+    @media only screen and (min-width:850px) {
       &:not(:nth-last-child(1)) {
         display: inline-block;
       }
