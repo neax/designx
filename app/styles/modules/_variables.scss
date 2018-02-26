@@ -22,3 +22,16 @@ $grayscale-colors: (
   'medium-gray': ($medium-gray, $white),
   'light-gray': ($light-gray, $dark-gray),
 );
+
+$all-colors: map-merge($grayscale-colors, $colors);
+
+$semantic-colors: (
+  'primary': ($action-color, $white),
+);
+
+$all-semantic-colors: map-merge($all-colors, $semantic-colors);
+
+// Social colors
+
+$facebook-color: #36579d;
+$google-color: #e5462c;

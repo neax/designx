@@ -79,6 +79,8 @@ $grayscale-colors: (
   'light-gray': ($light-gray, $dark-gray),
 );
 
+$all-colors: map-merge($grayscale-colors, $colors);
+
 // Badges
 $badge-font-size: 90% !default;
 $badge-point: '\f111' !default;
@@ -109,7 +111,6 @@ $focus-outline-offset: 2px;
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
-
 
 // Navbar
 $navbar-height: 54px;
