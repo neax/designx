@@ -41,15 +41,14 @@ textarea {
 #{$all-text-inputs},
 select [multiple] {
   appearance: none;
-  box-sizing: border-box;
-  transition: border-color $base-duration $base-timing;
-
   background-color: $base-background-color;
   border: $base-border;
   border-radius: $base-border-radius;
-  line-height: $base-line-height;
+  box-sizing: border-box;
   margin-bottom: $small-spacing;
   padding: $base-spacing / 3;
+  transition: border-color $base-duration $base-timing;
+  line-height: $base-line-height;
   width: 100%;
 
   &:hover {
@@ -72,6 +71,8 @@ select [multiple] {
 
   &::placeholder {
     color: tint($base-font-color, 40%);
+    line-height: $base-line-height;
+
   }
 }
 

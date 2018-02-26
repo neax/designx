@@ -1,0 +1,76 @@
+$_container-width: 25rem;
+
+.auth {
+  background-color: $action-color;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.auth-container {
+  display: table-cell;
+  vertical-align: middle;
+  padding: $small-spacing;
+}
+
+.auth-header {
+  text-align: center;
+  margin: 0 auto $base-spacing;
+
+  a {
+    color: $white;
+  }
+}
+
+.auth-content {
+  background-color: $white;
+  border-radius: $base-border-radius;
+  padding: $base-spacing * 1.5;
+  max-width: $_container-width - $base-spacing;
+  box-sizing: border-box;
+  margin: 0 auto $base-spacing;
+
+  h2 {
+    margin-bottom: $small-spacing * 2;
+    text-align: center;
+  }
+}
+
+.auth-footer {
+  color: $white;
+  text-align: center;
+
+  a {
+    color: $white;
+    font-weight: $font-semi-bold;
+    text-decoration: underline;
+  }
+}
+
+.auth-social {
+  .button {
+    margin-left: $base-spacing /8;
+  }
+}
+
+.button {
+  &.outline-facebook {
+    border: 1px solid $facebook-color;
+    color: $facebook-color;
+
+    &:hover {
+      background-color: $facebook-color;
+      color: $white;
+    }
+  }
+
+  &.outline-google {
+    border: 1px solid $google-color;
+    color: $google-color;
+
+    &:hover {
+      background-color: $google-color;
+      color: $white;
+    }
+  }
+}

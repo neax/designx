@@ -22,10 +22,10 @@ exports.plugins = {
           ['node_modules/normalize.css']
         )
     }
-  }
+  },
   // autoReload: {enabled: true}
-  // postcss: {processors: [
-  //   require('postcss-cssnext')('last 2 versions'),
-  //   require('csswring')()
-  // ]}
+  postcss: {processors: [
+    require('postcss-cssnext')('last 2 versions'),
+    require('csswring')()
+  ]}
 };

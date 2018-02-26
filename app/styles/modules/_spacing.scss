@@ -1,0 +1,11 @@
+@each $prop, $abbrev in (margin: m, padding: p) {
+  .#{$abbrev}b { #{$prop}-bottom: $base-spacing }
+  .#{$abbrev}t { #{$prop}-top: $base-spacing }
+  .#{$abbrev}r { #{$prop}-right: $base-spacing }
+  .#{$abbrev}l { #{$prop}-left: $base-spacing }
+
+  .#{$abbrev}b-small { #{$prop}-bottom: $small-spacing }
+  .#{$abbrev}t-small { #{$prop}-top: $small-spacing }
+  .#{$abbrev}r-small { #{$prop}-right: $small-spacing }
+  .#{$abbrev}l-small { #{$prop}-left: $small-spacing }
+}
