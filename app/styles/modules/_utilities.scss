@@ -2,8 +2,8 @@
 
 // Floats
 
-.left { @include float-left; }
-.right { @include float-right; }
+.left { float: left; }
+.right { float: right; }
 
 // Text Alignment
 
@@ -12,7 +12,11 @@
 .text-right { text-align: right !important; }
 .text-justify { text-align: justify !important; }
 .text-nowrap { white-space: nowrap !important; }
-.text-truncate { @include text-truncate; }
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;;
+}
 
 // Text Transform
 
@@ -60,30 +64,10 @@
 }
 
 .clearfix {
-  @include clearfix;
+  clear: both;
 }
 
 // Others
-
-.background-cover-center {
-  background-position: center;
-  background-size: cover;
-}
-
-.table {
-  @include padding($base-spacing null);
-}
-
-.table-title {
-  @include margin(null null $base-spacing);
-
-  font-weight: bold;
-  text-align: center;
-}
-
-.relative {
-  position: relative;
-}
 
 .rounded {
   border-radius: $base-border-radius;
