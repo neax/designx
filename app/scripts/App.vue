@@ -1,6 +1,10 @@
 <template lang="html">
   <div>
-    <Nav title="DesignX"></Nav>
+    <Nav title="DesignX" icon="fas fa-cube">
+      <template slot="right">
+        <a href="#">Icon 1</a>
+      </template>
+    </Nav>
 
     <main>
       <h1 class="page-title">Cheasheet</h1>
