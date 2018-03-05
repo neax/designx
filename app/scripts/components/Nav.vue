@@ -1,10 +1,13 @@
 <template lang="html">
-  <nav class="nav">
+  <nav>
     <a class="nav-logo" href="#">
-      <i class="fas fa-cube"></i> {{ title }}
+      <i :class="icon"></i> {{ title }}
     </a>
-    <div class="nav-right">
-      <a href="#"><i class="fas fa-clock"></i></a>
+
+    <slot name="left"></slot>
+
+    <div class="nav-right" v-if="$slots.right">
+      <slot name="right"></slot>
       <a href="#" id="button-nav-responsive"><i class="fas fa-bars"></i></a>
     </div>
   </nav>
@@ -12,6 +15,6 @@
 
 <script>
 export default {
-  props: ['title']
+  props: ['title', 'icon']
 }
 </script>
