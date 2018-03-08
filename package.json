@@ -1,46 +1,47 @@
 {
   "name": "designx",
+  "description": "A Vue.js project",
   "version": "1.0.0",
-  "description": "A simple design system",
-  "main": "index.js",
-  "scripts": {
-    "start": "brunch watch --server",
-    "build": "brunch build --production"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/neax/designx.git"
-  },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/neax/designx/issues"
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --mode development",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
-  "homepage": "https://github.com/neax/designx#readme",
   "dependencies": {
-    "auto-reload-brunch": "^2.7.1",
-    "babel-brunch": "^6.1.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
     "babel-preset-env": "^1.6.1",
-    "babel-runtime": "^6.26.0",
-    "bootstrap": "^4.0.0",
     "bourbon": "^5.0.0",
     "bourbon-neat": "^2.1.0",
-    "brunch": "^2.10.12",
-    "csswring": "^6.0.3",
-    "jquery": "^3.3.1",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.10",
+    "designx": "github:neax/designx#b23c365",
+    "node-sass": "^4.7.2",
     "normalize.css": "^8.0.0",
-    "popper.js": "^1.12.9",
-    "postcss": "^6.0.18",
-    "postcss-cssnext": "^3.1.0",
-    "sass-brunch": "^2.10.4",
-    "spostcss-brunch": "^1.0.1",
-    "uglify-js-brunch": "^2",
+    "postcss": "^6.0.19",
+    "sass-loader": "^6.0.7",
+    "sass-resources-loader": "^1.3.3",
+    "style-loader": "^0.20.2",
     "vue": "^2.5.13",
-    "vue-brunch": "^2.0.1",
-    "vue-router": "^3.0.1"
+    "vue-hot-reload-api": "^2.3.0",
+    "vue-loader": "^14.1.1",
+    "vue-moment": "^3.2.0",
+    "vue-resource": "^1.3.5",
+    "vue-router": "^3.0.1",
+    "vue-style-loader": "^4.0.2",
+    "vuex": "^3.0.1",
+    "webpack": "^4.0.1",
+    "webpack-dev-server": "^3.1.0"
   },
   "devDependencies": {
-    "babel-plugin-transform-runtime": "^6.23.0"
+    "file-loader": "^1.1.11",
+    "standard": "^10.0.3",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0",
+    "stylelint-scss": "^2.3.0",
+    "vue-template-compiler": "^2.5.13",
+    "webpack-cli": "^2.0.10"
   }
 }

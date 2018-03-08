@@ -1,0 +1,76 @@
+.button {
+  appearance: none;
+  border-radius: $base-border-radius;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $font-semi-bold;
+  line-height: 1;
+  padding: $small-spacing $base-spacing;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  &.small {
+    font-size: .9rem;
+    padding: $small-spacing /2 $base-spacing /2;
+  }
+
+  // Buttons Colors
+  @each $name, $values in $all-semantic-colors {
+    $background-color: nth($values, 1);
+    $color: nth($values, 2);
+
+    &.#{$name} {
+      background-color: $background-color;
+      border: 1px solid $background-color;
+      color: $color;
+
+      &:hover {
+        background-color: shade($background-color, 12.5%);
+        border-color: shade($background-color, 12.5%);
+        color: $color;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgba($background-color, .5);
+        outline: 0;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: .5;
+
+        &:hover {
+          background-color: $background-color;
+        }
+      }
+    }
+  }
+
+  // Outline colors
+  @each $name, $values in $all-semantic-colors {
+    $background-color: nth($values, 1);
+    $color: nth($values, 2);
+
+    &.outline-#{$name} {
+      background-color: transparent;
+      border: 1px solid $background-color;
+      color: $background-color;
+
+      &:hover {
+        background-color: $background-color;
+        color: $color;
+      }
+    }
+  }
+}
