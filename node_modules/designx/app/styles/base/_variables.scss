@@ -1,0 +1,148 @@
+// Breakpoints
+$small-screen: 540px;
+$medium-screen: 720px;
+$large-screen: 960px;
+
+// Typography
+$base-font-family: 'proximasoft', sans-serif;
+$code-font-family: $base-font-family;
+$heading-font-family: $base-font-family;
+
+// Font awesome
+$font-awesome-solid: 'Font Awesome 5 Solid' !default;
+$font-awesome-regular: 'Font Awesome 5 Regular' !default;
+$font-awesome-light: 'Font Awesome 5 Light' !default;
+
+// Line height
+$base-line-height: $golden;
+$heading-line-height: 100%;
+
+// Other sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Font sizes
+$big-font-size: 1.3rem;
+$base-font-size: 1rem;
+$medium-font-size: .9rem;
+$small-font-size: .7rem;
+
+// Header sizes
+$h1-fontsize: 2rem !default;
+$h2-fontsize: 1.5rem !default;
+$h3-fontsize: 1.25rem !default;
+$h4-fontsize: 1.125rem !default;
+$h5-fontsize: 1.0625rem !default;
+$h6-fontsize: 1rem !default;
+
+// Font weight
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semi-bold: 600;
+$font-bold: 700;
+$font-extra-bold: 800;
+
+// Colors
+$blue: #0099e5;
+$green: #34bf49;
+$red: #ff4c4c;
+$orange: #f47721;
+$purple: #8162b1;
+$sky-blue: #00bce4;
+$yellow: #ffd900;
+$brown: #8a7967;
+$white: #fff;
+$black: #000;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+// Colors map in format -> color: primary color, secondary color
+$colors: (
+  'blue': ($blue, $white),
+  'green': ($green, $white),
+  'red': ($red, $white),
+  'orange': ($orange, $white),
+  'purple': ($purple, $white),
+  'sky-blue': ($sky-blue, $white),
+  'yellow': ($yellow, $dark-gray),
+  'brown': ($brown, $white),
+  'gray': ($dark-gray, $white),
+);
+
+$grayscale-colors: (
+  'dark-gray': ($dark-gray, $white),
+  'medium-gray': ($medium-gray, $white),
+  'light-gray': ($light-gray, $dark-gray),
+);
+
+$all-colors: map-merge($grayscale-colors, $colors);
+
+// Badges
+$badge-font-size: 90% !default;
+$badge-point: '\f111' !default;
+
+// Breadcrumbs
+$breadcrumb-divider: '\f105' !default;
+
+$alert-close-icon: '\f00d' !default;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: nth(map-get(map-merge($colors, $grayscale-colors), $action-color), 1);
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: $white;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Focus
+$focus-outline-color: transparentize($action-color, .4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Navbar
+$navbar-height: 54px;
+$navbar-dropdown-icon: '\f107';
+
+$designup-nav: (
+  columns: 12,
+  gutter: 0,
+  media: 850px,
+);
+
+// Font path
+$font-path: '../fonts';
+
+// Neat variables
+$small-screen-grid: (
+  media: $small-screen,
+);
+
+$medium-screen-grid: (
+  media: $medium-screen,
+);
+
+$large-screen-grid: (
+  media: $large-screen,
+);
+
+// Quickly modify global styling by enabling or disabling optional features
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+$enable-gradients: false !default;
+$enable-transitions: true !default;
+$enable-hover-media-query: false !default;
+$enable-grid-classes: true !default;
+$enable-print-styles: true !default;

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from '../scripts/router'
+import router from '../src/router'
 
 require('./styles/designx.scss')
 

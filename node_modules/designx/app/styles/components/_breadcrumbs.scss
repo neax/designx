@@ -1,0 +1,36 @@
+// Breadcrumbs
+
+.breadcrumbs {
+  @include padding($small-spacing null);
+  @include grid-media($medium-screen-grid) {
+    display: block;
+    text-align: left;
+  }
+
+  font-weight: $font-semi-bold;
+  text-align: center;
+
+  a {
+    color: $medium-gray;
+
+    &:last-child {
+      color: $action-color;
+      cursor: text;
+    }
+
+    &:not(:last-child) {
+      &:hover {
+        color: $action-color;
+      }
+    }
+
+    &:not(:last-child)::after {
+      @include padding(null $small-spacing);
+
+      color: $medium-gray;
+      content: '#{$breadcrumb-divider}';
+      font-family: $font-awesome-regular;
+      vertical-align: bottom;
+    }
+  }
+}

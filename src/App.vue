@@ -33,16 +33,16 @@
 </template>
 
 <script>
-import Nav from '../scripts/components/Nav'
-import Alert from '../scripts/components/Alert'
-import Module from '../scripts/custom/Module'
+import Nav from '../src/components/Nav'
+import Alert from '../src/components/Alert'
+import Module from '../src/custom/Module'
 
 
 export default {
   name: 'app',
   data: function() {
     return {
-      modules: require('../scripts/data/ModulesData').modules
+      modules: require('../src/data/ModulesData').modules
     }
   },
 
