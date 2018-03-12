@@ -34,14 +34,8 @@ module.exports = {
                   includePaths: [require('bourbon').includePaths, require('bourbon-neat').includePaths, 'node_modules/normalize.css/']
                 }
               }          
-            ]/*,
-            'sass': [
-              'vue-style-loader',
-              'css-loader',
-              'sass-loader?indentedSyntax'
-            ]*/
+            ]
           }
-          // other vue-loader options go here
         }
       },
       {
