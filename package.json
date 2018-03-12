@@ -17,7 +17,6 @@
     "bourbon-neat": "^2.1.0",
     "cross-env": "^5.1.3",
     "css-loader": "^0.28.10",
-    "designx": "github:neax/designx#b23c365",
     "node-sass": "^4.7.2",
     "normalize.css": "^8.0.0",
     "postcss": "^6.0.19",
