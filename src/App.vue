@@ -33,9 +33,9 @@
 </template>
 
 <script>
-import Nav from '../src/components/Nav'
-import Alert from '../src/components/Alert'
-import Module from '../src/custom/Module'
+import Nav from './components/Nav'
+import Alert from './components/Alert'
+import Module from './custom/Module'
 
 
 export default {
