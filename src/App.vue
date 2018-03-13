@@ -25,6 +25,12 @@
       </div>
     </main>
 
+    <button id="show-modal" @click="showModal = true">Show Modal</button>
+    <modals v-if="showModal" @close="showModal = false">
+      <h3 slot="header">Custom header</h3>
+    </modals>
+
+  
     <footer>
       &copy; Neax
     </footer>
@@ -36,22 +42,26 @@
 import Nav from './components/Nav'
 import Alert from './components/Alert'
 import Module from './custom/Module'
-
+import Modals from './components/Modals'
 
 export default {
   name: 'app',
   data: function() {
     return {
-      modules: require('../src/data/ModulesData').modules
+      modules: require('../src/data/ModulesData').modules ,
+      showModal: false
     }
   },
 
   components: {
     Nav,
     Module,
-    Alert
+    Alert,
+    Modals
   }
 }
-
 </script>
 
+<style lang="scss">
+
+</style>
