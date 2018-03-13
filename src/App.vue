@@ -60,7 +60,7 @@ export default {
     Module,
     Alert,
     Modals
-  },
+  }
 }
 </script>
 
