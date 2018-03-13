@@ -1,5 +1,6 @@
-<template lang="html">
-  <div>
+<template>
+  <div id="app">
+    
     <Nav title="DesignX" icon="fas fa-cube">
       <template slot="right">
         <a href="#">Icon 1</a>
@@ -27,25 +28,30 @@
     <footer>
       &copy; Neax
     </footer>
+
   </div>
 </template>
 
 <script>
-  import Nav from './components/Nav'
-  import Alert from './components/Alert'
-  import Module from './custom/Module'
+import Nav from './components/Nav'
+import Alert from './components/Alert'
+import Module from './custom/Module'
 
-  export default {
-    name: 'app',
-    data: function() {
-      return {
-        modules: require('./data/ModulesData').modules
-      }
-    },
-    components: {
-      Nav,
-      Module,
-      Alert
+
+export default {
+  name: 'app',
+  data: function() {
+    return {
+      modules: require('../src/data/ModulesData').modules
     }
+  },
+
+  components: {
+    Nav,
+    Module,
+    Alert
   }
+}
+
 </script>
+
