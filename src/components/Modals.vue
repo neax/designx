@@ -1,34 +1,38 @@
 <template>
-<transition>
-<div>
-<div class="modal-mask">
-    <div class="modal-wrapper">
-        <div class="modal-container">
+<div class="ui-preview">
+<div id="principal" class="modal-mask" @click="close" v-show=show>
+<div class="overlay-modal" >
+  
+        <div class="modal-container" @click.stop>
             <div id="modal-1" class="overlay-modal">
                 <div class="modal-header">
                 <slot name="header">Modal title</slot>
+                <a class="modal-close" onclick="document.getElementById('principal').style.display='none'">
+                  Exit
+                  <i class="fa fa-times">...</i>
+                </a>
             </div>
+          
 
             <div class="modal-content">
-                <slot name="body">Modal Body</slot>
-                
-            </div>
+                <slot name="body"> 
+                  <p> Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. </p>
+                  <p> Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea 
+                  commodo. </p>
+                </slot> 
 
-            <div class="modal-footer">
-                <slot name="footer">
-                default footer
-                <button class="modal-default-button" @click="$emit('close')">
-                    OK
-                </button>
-                </slot>
+                <div class="modal-buttons">
+                  <button class="button outline" onclick="document.getElementById('principal').style.display='none'">Close</button>
+                  <button class="button" onclick="document.getElementById('principal').style.display='none'">Save Modal</button>
+                </div>
             </div>
-
         </div>
         </div>      
-    </div>
+    
 </div>    
 </div>
-</transition>
+</div>
 </template>
 
 <script>
@@ -37,7 +41,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .modal-mask {
   position: fixed;
   z-index: 9998;
@@ -57,7 +61,7 @@ export default {
 
 .modal-container {
   width: 300px;
-  margin: 0px auto;
+  margin: 100px auto;
   padding: 20px 30px;
   background-color: #fff;
   border-radius: 2px;
@@ -66,7 +70,7 @@ export default {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.modal-header h3 {
+.modal-header h2 {
   margin-top: 0;
   color: #42b983;
 }
@@ -78,4 +82,5 @@ export default {
 .modal-default-button {
   float: right;
 }
+
 </style>    

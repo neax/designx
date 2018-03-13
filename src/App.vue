@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     
-    <Nav title="DesignX" icon="fas fa-cube">
+    <Nav title="DesignX" icon="fas fa-cube" >
       <template slot="right">
         <a href="#">Icon 1</a>
       </template>
@@ -9,7 +9,6 @@
 
     <main>
       <h1 class="page-title">Cheasheet</h1>
-
       <div class="grid">
         <div class="grid-3">
           <div class="sidebar">
@@ -23,14 +22,18 @@
           <router-view></router-view>
         </div>
       </div>
+
+
+      <button id="show-modal" type="button" onclick="document.getElementById('principal').style.display='block'"> 
+        Open modal
+      </button>      
+
+      <modals onclick="document.getElementById('principal').style.display='none'"> 
+      </modals>
+
     </main>
 
-    <button id="show-modal" @click="showModal = true">Show Modal</button>
-    <modals v-if="showModal" @close="showModal = false">
-      <h3 slot="header">Custom header</h3>
-    </modals>
 
-  
     <footer>
       &copy; Neax
     </footer>
@@ -48,8 +51,7 @@ export default {
   name: 'app',
   data: function() {
     return {
-      modules: require('../src/data/ModulesData').modules ,
-      showModal: false
+      modules: require('../src/data/ModulesData').modules
     }
   },
 
