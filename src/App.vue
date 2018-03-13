@@ -23,16 +23,12 @@
         </div>
       </div>
 
-
       <button id="show-modal" type="button" onclick="document.getElementById('principal').style.display='block'"> 
         Open modal
       </button>      
-
       <modals onclick="document.getElementById('principal').style.display='none'"> 
       </modals>
-
     </main>
-
 
     <footer>
       &copy; Neax
