@@ -39,7 +39,7 @@ th {
 
 th,
 td {
-  padding: $small-spacing $small-spacing $small-spacing 0;
+  padding: $small-spacing * 1.25 $small-spacing $small-spacing * 1.25 0;
 }
 
 tr:hover > td,
