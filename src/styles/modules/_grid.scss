@@ -1,6 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-gap: $grid-gap;
 }
 
 @for $i from 1 through 12 {
