@@ -23,11 +23,9 @@
         </div>
       </div>
 
-
-      <button id="show-modal" type="button" onclick="document.getElementById('principal').style.display='block'"> 
-        Open modal
-      </button>      
-      <modals onclick="document.getElementById('principal').style.display='none'"> 
+      <modal-button modalId="customModal"> touchme </modal-button>
+      <modals modalId="customModal" title="Module Title">
+        <h6> Modals content... </h6>
       </modals>
 
     </main>
@@ -45,6 +43,7 @@ import Nav from './components/Nav'
 import Alert from './components/Alert'
 import Module from './custom/Module'
 import Modals from './components/Modals'
+import ModalButton from './components/ModalButton'
 
 export default {
   name: 'app',
@@ -58,7 +57,8 @@ export default {
     Nav,
     Module,
     Alert,
-    Modals
+    Modals,
+    'modal-button': ModalButton
   }
 }
 </script>
