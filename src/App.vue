@@ -1,9 +1,13 @@
 <template>
   <div id="app">
-    
+
     <Nav title="DesignX" icon="fas fa-cube">
       <template slot="right">
         <a href="#">Icon 1</a>
+
+        <NavDropdown title="Example of dropdown" icon=true>
+          <a href="#">First link</a>
+        </NavDropdown>
       </template>
     </Nav>
 
@@ -14,7 +18,7 @@
         <div class="grid-3">
           <div class="sidebar">
             <h3>Modules</h3>
-            <router-link :to="{ name: 'module', params: { moduleId: module.id }}" v-for="module in modules">
+            <router-link :to="{ name: 'module', params: { moduleId: module.id }}" v-for="module in modules" :key="module.id">
               {{ module.title }}
             </router-link>
           </div>
@@ -36,22 +40,20 @@
 import Nav from './components/Nav'
 import Alert from './components/Alert'
 import Module from './custom/Module'
-
+import NavDropdown from './components/NavDropdown'
 
 export default {
   name: 'app',
   data: function() {
     return {
-      modules: require('../src/data/ModulesData').modules
+      modules: require('./data/ModulesData').modules
     }
   },
-
   components: {
     Nav,
     Module,
-    Alert
+    Alert,
+    NavDropdown
   }
 }
-
 </script>
-
