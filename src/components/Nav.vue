@@ -1,8 +1,8 @@
 <template lang="html">
   <nav>
-    <a class="nav-logo" href="#">
-      <i :class="icon"></i> {{ title }}
-    </a>
+    <span class="nav-logo">
+      <slot name="logo"></slot>
+    </span>
 
     <slot name="left"></slot>
 
@@ -15,6 +15,6 @@
 
 <script>
 export default {
-    props: ['title', 'icon']
+  props: ['title', 'icon']
 }
 </script>

@@ -1,7 +1,10 @@
 <template>
   <div id="app">
 
-    <Nav title="DesignX" icon="fas fa-cube">
+    <Nav>
+      <template slot="logo">
+        <a href="#"><i class="fas fa-cube"></i> DesignX</a>
+      </template>
       <template slot="right">
         <a href="#">Icon 1</a>
 
