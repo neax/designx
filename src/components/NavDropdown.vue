@@ -2,7 +2,7 @@
   <div class="nav-dropdown">
     <a href="javascript:void(0)">
       {{ title }}
-      <i class="fas fa-angle-down" v-if="icon"></i>
+      <i class="fas fa-angle-down nav-dropdown-icon" v-if="icon"></i>
     </a>
     <div class="nav-dropdown-content">
       <slot></slot>
@@ -14,7 +14,6 @@
 export default {
   name: 'navDropdown',
   props: ['icon', 'title']
-
 }
 </script>
 
@@ -47,5 +46,9 @@ export default {
     display: block !important;
     text-align: right;
   }
+}
+
+.nav-dropdown-icon {
+  margin-left: $base-spacing / 8;
 }
 </style>
