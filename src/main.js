@@ -4,8 +4,9 @@ import router from './router'
 
 require('./styles/designx.scss')
 
+Vue.config.productionTip = false
+
 new Vue({
-  el: '#app',
-  router, 
+  router,
   render: h => h(App)
-})
+}).$mount('#app')
