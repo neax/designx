@@ -8,8 +8,8 @@
       <template slot="right">
         <a href="#">Icon 1</a>
 
-        <NavDropdown title="Example of dropdown2" icon="True">
-          <a href="#">First link2</a>
+        <NavDropdown title="Example of dropdown" icon=true>
+          <a href="#">First link</a>
         </NavDropdown>
       </template>
     </Nav>
