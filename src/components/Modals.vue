@@ -1,56 +1,64 @@
 <template>
-
-<div class="ui-preview">
-<!-- <div id="modals-vue" class="modal-mask" @click="close" v-show=show> -->
-<div :id="modalId" class="modal-mask" @click="close">  
+<!-- <div class="ui-preview"> -->
+<transition>
+<div :id="id" class="modal-mask" @click="close">
 <div class="overlay-modal" >
   
         <div class="modal-container" @click.stop>
             <div id="modal-1" class="overlay-modal">
                 <div class="modal-header">
-                <slot name="header">{{ title }}</slot>
-                <a class="modal-close" onclick="document.getElementById('modals-vue').style.display='none'">
-                  Exit
-                  <i class="fa fa-times">...</i>
+                  <h4>
+                    <slot name="header">{{ title }}</slot>
+                    <a v-if="closeIcon==='Yes' " class="modal-close" @click="close">
+                    <i class="fa fa-times"> X </i>
                 </a>
+                  </h4>
+               </div>
+        
+            <!-- <div class="modal-content"> -->
+            <div class="modal-body">  
+                <slot></slot> 
             </div>
-          
 
-            <div class="modal-content">            
-                <slot> </slot> 
-
-                <div class="modal-buttons">
-                  <button class="button outline" @click="close">Close</button>
-                  <button class="button" @click="close">Save Modal</button>
-                </div>
+            <div class="modal-buttons"> 
+                  <!-- Button Default -->
+                  <!-- <button class="button outline" @click="close">Close</button>    -->
+                  <a v-if="nameButton">                     
+                    <button class= "button" @click="close">{{ nameButton }} </button>
+                  </a>
+                  <a @click="close">
+                    <slot name='m-button' >{nameb}</slot>
+                  </a>
+            </div>
             </div>
         </div>
         </div>      
-
 </div>    
 </div>
-
-</div>
-
-
+</transition>
+<!-- </div> -->
 </template>
-
 
 <script>
 export default {
   name: 'modals',
-  props: ['title', 'modalId'],
+  props: ['id','title', 'nameButton', 'closeIcon', 'draggable'],
   data () {
     return {
     }
   },
   methods: {
     close () {
-      document.getElementById(this.modalId).style.display = 'none'
-      this.$emit('close')
+      document.getElementById(this.id).style.display = 'none'
     }
+  },
+  mounted: function() {
+    document.addEventListener("keydown", (e) => {
+      if(e.keyCode == 27) {
+        document.getElementById(this.id).style.display = 'none'
+      }
+    })
   }
-
 }
 
 </script>
@@ -64,7 +72,7 @@ export default {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, .5);
-  // display: table;
+  display: table;
   transition: opacity .3s ease;
   display: none
 }
@@ -73,18 +81,18 @@ export default {
   vertical-align: middle;
 }
 .modal-container {
-  width: 600px;
+  width: 700px;
   margin: 100px auto;
   padding: 20px 30px;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
 }
-.modal-header h2 {
+.modal-header h4 {
   margin-top: 0;
-  color: #42b111;
+  color: #11a2ea;
 }
 .modal-body {
   margin: 20px 0;
@@ -93,8 +101,5 @@ export default {
   float: right;
 }
 
-.modal {
-  display: block;
-}
 
 </style>

@@ -23,13 +23,15 @@
         </div>
       </div>
 
-      <modal-button modalId="customModal"> touchme </modal-button>
-      <modals modalId="customModal" title="Module Title">
-        <h6> Modals content... </h6>
+      <button class='button' v-modal:prueba2> Go! </button> 
+      <modals id='prueba2' title="Module Title" >
+        Modals content example ...        
+          <button slot="m-button" class="button">
+            EXIT2
+          </button>
       </modals>
 
     </main>
-
 
     <footer>
       &copy; Neax
@@ -43,7 +45,6 @@ import Nav from './components/Nav'
 import Alert from './components/Alert'
 import Module from './custom/Module'
 import Modals from './components/Modals'
-import ModalButton from './components/ModalButton'
 
 export default {
   name: 'app',
@@ -57,8 +58,7 @@ export default {
     Nav,
     Module,
     Alert,
-    Modals,
-    'modal-button': ModalButton
+    'modals': Modals
   }
 }
 </script>
