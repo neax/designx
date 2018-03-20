@@ -81,6 +81,10 @@ nav {
     background-color: inherit;
   }
 
+  a.active {
+    background-color: transparent;
+  }
+
   i,
   svg {
     margin-right: $small-spacing / 4;
