@@ -12,7 +12,7 @@
   position: relative;
 
   &:hover {
-    @include box-shadow(0, 1rem, 3rem, rgba(189, 195, 199, .6), false);
+    box-shadow: 0 1rem 3rem rgba(189, 195, 199, 0.6);
   }
 }
 
@@ -29,7 +29,7 @@
     color: $color;
 
     .card-subtitle {
-      @include alpha-attribute('color', rgba($color, .9), transparent);
+      color: rgba($color, 0.9);
     }
 
     a {
