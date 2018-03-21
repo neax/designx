@@ -1,9 +1,7 @@
 <template>
-<!-- <div class="ui-preview"> -->
 <transition>
 <div :id="id" class="modal-mask" @click="close">
 <div class="overlay-modal" >
-  
         <div class="modal-container" @click.stop>
             <div id="modal-1" class="overlay-modal">
                 <div class="modal-header">
@@ -15,7 +13,6 @@
                   </h4>
                </div>
         
-            <!-- <div class="modal-content"> -->
             <div class="modal-body">  
                 <slot></slot> 
             </div>
@@ -27,29 +24,27 @@
                     <button class= "button" @click="close">{{ nameButton }} </button>
                   </a>
                   <a @click="close">
-                    <slot name='m-button' >{nameb}</slot>
+                    <slot name='m-button'>{ nameb }</slot>
                   </a>
             </div>
             </div>
         </div>
-        </div>      
+</div>      
 </div>    
-</div>
 </transition>
-<!-- </div> -->
 </template>
 
 <script>
 export default {
   name: 'modals',
-  props: ['id','title', 'nameButton', 'closeIcon', 'draggable'],
+  props: ['id','title', 'nameButton', 'closeIcon'],
   data () {
     return {
     }
   },
   methods: {
     close () {
-      document.getElementById(this.id).style.display = 'none'
+      var pacrueba = document.getElementById(this.id).style.display = 'none';
     }
   },
   mounted: function() {
