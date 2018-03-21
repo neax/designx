@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     close () {
-      var pacrueba = document.getElementById(this.id).style.display = 'none';
+      document.getElementById(this.id).style.display = 'none';
     }
   },
   mounted: function() {
