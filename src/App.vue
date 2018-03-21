@@ -23,15 +23,15 @@
         </div>
       </div>
 
-
-      <button id="show-modal" type="button" onclick="document.getElementById('principal').style.display='block'"> 
-        Open modal
-      </button>      
-      <modals onclick="document.getElementById('principal').style.display='none'"> 
+      <button class='button' v-modal:prueba2> Go! </button> 
+      <modals id='prueba2' title="Module Title" closeIcon="Yes">
+        Modals content example ...        
+          <button slot="m-button" class="button">
+              My button
+          </button>
       </modals>
 
     </main>
-
 
     <footer>
       &copy; Neax
@@ -58,7 +58,7 @@ export default {
     Nav,
     Module,
     Alert,
-    Modals
+    'modals': Modals
   }
 }
 </script>
