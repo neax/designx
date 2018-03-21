@@ -24,10 +24,17 @@
       </div>
 
       <button class='button' v-modal:prueba2> Go! </button> 
+<<<<<<< HEAD
       <modals id='prueba2' title="Module Title" closeIcon="Yes">
         Modals content example ...        
           <button slot="m-button" class="button">
               My button
+=======
+      <modals id='prueba2' title="Module Title" >
+        Modals content example ...        
+          <button slot="m-button" class="button">
+            EXIT2
+>>>>>>> 8340f9a4bd6893ebb1c4d6878f736168c9e5586b
           </button>
       </modals>
 
