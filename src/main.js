@@ -13,9 +13,9 @@ Vue.directive('modal' ,{
     })
   }
 })
+Vue.config.productionTip = false
 
 new Vue({
-  el: '#app',
-  router, 
+  router,
   render: h => h(App)
-})
+}).$mount('#app')

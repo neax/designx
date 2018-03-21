@@ -1,9 +1,16 @@
 <template>
   <div id="app">
-    
-    <Nav title="DesignX" icon="fas fa-cube" >
+
+    <Nav>
+      <template slot="logo">
+        <a href="#"><i class="fas fa-cube"></i> DesignX</a>
+      </template>
       <template slot="right">
         <a href="#">Icon 1</a>
+
+        <NavDropdown title="Example of dropdown" icon=true>
+          <a href="#">First link</a>
+        </NavDropdown>
       </template>
     </Nav>
 
@@ -13,7 +20,7 @@
         <div class="grid-3">
           <div class="sidebar">
             <h3>Modules</h3>
-            <router-link :to="{ name: 'module', params: { moduleId: module.id }}" v-for="module in modules">
+            <router-link :to="{ name: 'module', params: { moduleId: module.id }}" v-for="module in modules" :key="module.id">
               {{ module.title }}
             </router-link>
           </div>
@@ -43,26 +50,24 @@
 <script>
 import Nav from './components/Nav'
 import Alert from './components/Alert'
-import Module from './custom/Module'
 import Modals from './components/Modals'
+import Module from './custom/Module'
+import NavDropdown from './components/NavDropdown'
 
 export default {
   name: 'app',
   data: function() {
     return {
-      modules: require('../src/data/ModulesData').modules
+      modules: require('./data/ModulesData').modules
     }
   },
-
   components: {
     Nav,
     Module,
     Alert,
-    'modals': Modals
+    'modals': Modals,
+    NavDropdown
   }
 }
 </script>
-
-<style lang="scss">
-
-</style>
+    
