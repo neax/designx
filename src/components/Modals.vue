@@ -19,11 +19,7 @@
 
             <div class="modal-buttons"> 
                   <!-- Button Default -->
-<<<<<<< HEAD
                   <!-- <button class="button outline" @click="close">Close</button> -->
-=======
-                  <!-- <button class="button outline" @click="close">Close</button>    -->
->>>>>>> 8340f9a4bd6893ebb1c4d6878f736168c9e5586b
                   <a v-if="nameButton">                     
                     <button class= "button" @click="close">{{ nameButton }} </button>
                   </a>
@@ -34,11 +30,7 @@
             </div>
         </div>
 </div>      
-<<<<<<< HEAD
 </div>      
-=======
-</div>    
->>>>>>> 8340f9a4bd6893ebb1c4d6878f736168c9e5586b
 </transition>
 </template>
 
