@@ -30,13 +30,13 @@
         </div>
       </div>
 
-      <button class='button' v-modal:prueba2> Go! </button> 
-      <modals id='prueba2' title="Module Title" >
-        Modals content example ...        
-          <button slot="m-button" class="button">
-            EXIT2
-          </button>
-      </modals>
+          <button v-modal:Modal3> Text demo modal </button>
+          <modal id="Modal3" title="My Title" openMyIcon>
+            Hello from modal!
+            <slot name="MyComponents"> 
+             // My Component(s)
+            </slot>
+          </modal>
 
     </main>
 
@@ -50,9 +50,10 @@
 <script>
 import Nav from './components/Nav'
 import Alert from './components/Alert'
-import Modals from './components/Modals'
 import Module from './custom/Module'
+import Modal from './components/Modal'
 import NavDropdown from './components/NavDropdown'
+import { modal }  from './directives/Modal'
 
 export default {
   name: 'app',
@@ -65,8 +66,11 @@ export default {
     Nav,
     Module,
     Alert,
-    'modals': Modals,
+    Modal,
     NavDropdown
+  }, 
+  directives: {
+    modal
   }
 }
 </script>
