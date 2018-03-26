@@ -89,7 +89,7 @@ module.exports = {
 <modal id="Modal2" title="My Title" openMyIcon>
   Hello from modal!
   <slot name="MyComponents"> 
-    // My component(s)
+    <!-- My Component(s) -->
   </slot>
 </modal>
           `

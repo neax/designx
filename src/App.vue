@@ -30,11 +30,11 @@
         </div>
       </div>
 
-          <button v-modal:Modal3> Text demo modal </button>
-          <modal id="Modal3" title="My Title" openMyIcon>
+          <button v-modal:Modal1> Text demo modal </button>      
+          <modal id="Modal1" title="My Title" openMyIcon>
             Hello from modal!
             <slot name="MyComponents"> 
-             // My Component(s)
+              <!-- My Component(s) -->
             </slot>
           </modal>
 

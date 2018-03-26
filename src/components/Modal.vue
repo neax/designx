@@ -1,7 +1,7 @@
 <template lang="html">
 <transition>
   <!-- <div :id="id" class="modal-mask" @click="close"> -->
-  <div :id="id" class="modal-mask" @click="close" :show='show'>    
+  <div :id="id" class="modal-mask" @click="close" @keyup.esc="onEsc">
 
     <div class="modal" @click.stop>
       <h2>
@@ -25,6 +25,9 @@
 </template>
 
 <script>
+// 27 is ASCII Code for Key 'ESC'
+var ESC = 27;
+
 export default {
   name: 'modal',
   props: {
@@ -39,14 +42,16 @@ export default {
     openMyIcon: {
       type: Boolean,
       default: false
-    },  
-    show: {
-      default: true
     }
   },
   data () {
     return {
     }
+  },
+
+  created: function() {
+    document.addEventListener('keyup', this.onEsc)
+    console.log('create')
   },
 
   methods: {
@@ -60,16 +65,13 @@ export default {
     },
     close() {
       document.getElementById(this.safeId()).style.display = 'none'
-    } 
-  },
-
-  mounted: function() {
-    document.addEventListener("keydown", (e) => {
-      // 27 is ASCII Code for key 'esc'
-      if(this.show && e.keyCode == 27) {
+    },
+    onEsc: function(evt){
+      // If ESC was pressed
+      if(evt.keyCode === ESC) {        
         document.getElementById(this.safeId()).style.display = 'none'
       }
-    })
+    }
   }
 }
 </script>
