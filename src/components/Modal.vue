@@ -24,9 +24,6 @@
 </template>
 
 <script>
-// 27 is ASCII Code for Key 'ESC'
-var ESC = 27;
-
 export default {
   name: 'modal',
   props: {
@@ -65,8 +62,8 @@ export default {
       document.getElementById(this.safeId()).style.display = 'none'
     },
     onEsc: function(evt){
-      // If ESC was pressed
-      if(evt.keyCode === ESC) {        
+      // 27 is ASCII Code for Key 'ESC'
+      if(evt.keyCode === 27) {        
         document.getElementById(this.safeId()).style.display = 'none'
       }
     }
