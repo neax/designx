@@ -7,7 +7,7 @@
           <slot name="header">{{ title }}</slot>
         </h2>
         
-        <a class="modal-close" v-if="closeMyIcon" @click="close">
+        <a class="modal-close" v-if="closeIcon" @click="close">
           <i class="fa fa-times"></i>
         </a>
         
@@ -38,7 +38,7 @@ export default {
       type: String,
       default: 'Modal title'
     },
-    closeMyIcon: {
+    closeIcon: {
       type: Boolean,
       default: false
     }

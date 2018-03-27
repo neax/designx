@@ -84,7 +84,7 @@ module.exports = {
         {
           code: `
 <a v-modal:Modal2> Text demo modal </a>
-<modal id="Modal2" title="My Title" openMyIcon>
+<modal id="Modal2" title="My Title" closeIcon>
   Hello from modal!
   <slot name="footer"> 
     <!-- My footer -->
