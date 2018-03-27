@@ -29,7 +29,6 @@
           <router-view></router-view>
         </div>
       </div>
-
     </main>
 
     <footer>
