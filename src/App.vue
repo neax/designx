@@ -30,14 +30,6 @@
         </div>
       </div>
 
-          <button v-modal:Modal1> Text demo modal </button>      
-          <modal id="Modal1" title="My Title" openMyIcon>
-            Hello from modal!
-            <slot name="MyComponents"> 
-              <!-- My Component(s) -->
-            </slot>
-          </modal>
-
     </main>
 
     <footer>

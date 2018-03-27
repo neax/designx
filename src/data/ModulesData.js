@@ -69,7 +69,6 @@ module.exports = {
         }
       ]
     },
-    // 
     {
       id: 'modal',
       title: 'Modal',
@@ -80,16 +79,15 @@ module.exports = {
 <button v-modal:Modal1> Button demo modal </button>
 <modal id="Modal1" title="My Title">
   Hello from modal!
-</modal>
-          `
+</modal> `
         },
         {
           code: `
 <a v-modal:Modal2> Text demo modal </a>
 <modal id="Modal2" title="My Title" openMyIcon>
   Hello from modal!
-  <slot name="MyComponents"> 
-    <!-- My Component(s) -->
+  <slot name="footer"> 
+    <!-- My footer -->
   </slot>
 </modal>
           `
@@ -97,6 +95,5 @@ module.exports = {
       ]
 
     }
-    // 
   ]
 }

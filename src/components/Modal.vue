@@ -1,27 +1,26 @@
 <template lang="html">
-<transition>
-  <!-- <div :id="id" class="modal-mask" @click="close"> -->
-  <div :id="id" class="modal-mask" @click="close" @keyup.esc="onEsc">
+  <transition>
+    <div :id="id" class="modal-mask" @click="close" @keyup.esc="onEsc">
 
-    <div class="modal" @click.stop>
-      <h2>
-        <slot name="header">{{ title }}</slot>
-      </h2>
-      
-      <a class="modal-close" v-if="openMyIcon" @click="close">
-        <i class="fa fa-times"></i>
-      </a>
-      
-      <div class="modal-content">
-        <slot> </slot>
+      <div class="modal" @click.stop>
+        <h2>
+          <slot name="header">{{ title }}</slot>
+        </h2>
+        
+        <a class="modal-close" v-if="closeMyIcon" @click="close">
+          <i class="fa fa-times"></i>
+        </a>
+        
+        <div class="modal-content">
+          <slot> </slot>
+        </div>
+
+        <slot name="footer">
+        </slot>
       </div>
 
-      <slot name="MyComponents">
-      </slot>
     </div>
-
-  </div>
-</transition>
+  </transition>
 </template>
 
 <script>
@@ -39,7 +38,7 @@ export default {
       type: String,
       default: 'Modal title'
     },
-    openMyIcon: {
+    closeMyIcon: {
       type: Boolean,
       default: false
     }
@@ -51,7 +50,6 @@ export default {
 
   created: function() {
     document.addEventListener('keyup', this.onEsc)
-    console.log('create')
   },
 
   methods: {
