@@ -68,6 +68,32 @@ module.exports = {
             `
         }
       ]
+    },
+    {
+      id: 'modal',
+      title: 'Modal',
+      module: ['modal'],
+      examples: [
+        {
+          code: `
+<button v-modal:Modal1> Button demo modal </button>
+<modal id="Modal1" title="My Title">
+  Hello from modal!
+</modal> `
+        },
+        {
+          code: `
+<a v-modal:Modal2> Text demo modal </a>
+<modal id="Modal2" title="My Title" closeIcon>
+  Hello from modal!
+  <slot name="footer"> 
+    <!-- My footer -->
+  </slot>
+</modal>
+          `
+        }
+      ]
+
     }
   ]
 }

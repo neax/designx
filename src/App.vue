@@ -16,7 +16,6 @@
 
     <main>
       <h1 class="page-title">Cheasheet</h1>
-
       <div class="grid">
         <div class="grid-3">
           <div class="sidebar">
@@ -43,7 +42,9 @@
 import Nav from './components/Nav'
 import Alert from './components/Alert'
 import Module from './custom/Module'
+import Modal from './components/Modal'
 import NavDropdown from './components/NavDropdown'
+import { modal }  from './directives/Modal'
 
 export default {
   name: 'app',
@@ -56,7 +57,12 @@ export default {
     Nav,
     Module,
     Alert,
+    Modal,
     NavDropdown
+  }, 
+  directives: {
+    modal
   }
 }
 </script>
+    

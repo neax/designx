@@ -26,6 +26,8 @@
 .modal-close {
   @include position(absolute, $base-spacing / 1.5 $base-spacing / 1.5 null null);
   transition: all 200ms ease-in-out;
+  top: 50px;
+  right: 50px;
 
   color: $medium-gray;
   cursor: pointer;
