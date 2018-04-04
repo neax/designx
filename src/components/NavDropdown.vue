@@ -17,14 +17,14 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="css">
 .nav-dropdown {
   display: inline-block;
   position: relative;
 
   &:hover {
     .nav-dropdown-button {
-      background-color: darken($action-color, 5);
+      /* background-color: darken($action-color, 5); */
     }
 
     .nav-dropdown-content {
@@ -34,9 +34,9 @@ export default {
 }
 
 .nav-dropdown-content {
-  @include position(absolute, null 0 null null);
+  /* @include position(absolute, null 0 null null); */
 
-  background-color: $action-color;
+  /* background-color: $action-color; */
   display: none;
   min-width: 120px;
   width: 100%;
@@ -49,6 +49,6 @@ export default {
 }
 
 .nav-dropdown-icon {
-  margin-left: $base-spacing / 8;
+  /* margin-left: $base-spacing / 8; */
 }
 </style>

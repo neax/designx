@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 
-require('./styles/designx.scss')
+require('./styles/designx.css')
 
 Vue.config.productionTip = false
 

@@ -6,11 +6,11 @@
         <h2>
           <slot name="header">{{ title }}</slot>
         </h2>
-        
+
         <a class="modal-close" v-if="closeIcon" @click="close">
           <i class="fa fa-times"></i>
         </a>
-        
+
         <div class="modal-content">
           <slot> </slot>
         </div>
@@ -40,9 +40,8 @@ export default {
       default: false
     }
   },
-  data () {
-    return {
-    }
+  data() {
+    return {}
   },
 
   created: function() {
@@ -50,9 +49,9 @@ export default {
   },
 
   methods: {
-    safeId (suffix = '') {
+    safeId(suffix = '') {
       const id = this.id || this.localId_
-      if(!id) {
+      if (!id) {
         return null
       }
       suffix = String(suffix).replace(/\s+/g, '_')
@@ -61,9 +60,9 @@ export default {
     close() {
       document.getElementById(this.safeId()).style.display = 'none'
     },
-    onEsc: function(evt){
+    onEsc: function(evt) {
       // 27 is ASCII Code for Key 'ESC'
-      if(evt.keyCode === 27) {        
+      if (evt.keyCode === 27) {
         document.getElementById(this.safeId()).style.display = 'none'
       }
     }
@@ -71,7 +70,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 .modal-mask {
   position: fixed;
   z-index: 9998;
@@ -79,15 +78,15 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: table;
-  transition: opacity .3s ease;
-  display: none
+  transition: opacity 0.3s ease;
+  display: none;
 }
 
 .modal {
-  @include margin($base-spacing * 2 auto);
-  @include padding($small-spacing * 3);
+  margin: calc(var(--base-spacing) * 2) auto;
+  padding: calc(var(--small-spacing) * 3);
   transition: all 5s ease-in-out;
 
   background-color: $white;
@@ -99,7 +98,7 @@ export default {
 }
 
 .modal-close {
-  @include position(absolute, $base-spacing / 1.5 $base-spacing / 1.5 null null);
+  /* @include position(absolute, $base-spacing / 1.5 $base-spacing / 1.5 null null); */
   transition: all 200ms ease-in-out;
   top: 50px;
   right: 50px;
