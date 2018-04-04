@@ -48,7 +48,7 @@ import Alert from './components/Alert'
 import Module from './custom/Module'
 import Modal from './components/Modal'
 import NavDropdown from './components/NavDropdown'
-import { modal }  from './directives/Modal'
+import { modal } from './directives/Modal'
 
 export default {
   name: 'app',
@@ -63,10 +63,9 @@ export default {
     Alert,
     Modal,
     NavDropdown
-  }, 
+  },
   directives: {
     modal
   }
 }
 </script>
-    

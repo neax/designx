@@ -61,6 +61,18 @@
   --medium-gray: #999;
   --light-gray: #ddd;
 
+/* Gray scale */
+  --gray: var(--dark-gray);
+  --gray-10: color(var(--dark-gray) l(90));
+  --gray-20: color(var(--dark-gray) l(80));
+  --gray-30: color(var(--dark-gray) l(70));
+  --gray-40: color(var(--dark-gray) l(60));
+  --gray-50: color(var(--dark-gray) l(50));
+  --gray-60: color(var(--dark-gray) l(40));
+  --gray-70: color(var(--dark-gray) l(30));
+  --gray-80: color(var(--dark-gray) l(20));
+  --gray-90: color(var(--dark-gray) l(10));
+
   /* Colors map in format -> color: primary color, secondary color */
   $colors: (
     'blue': (--blue, --white),
