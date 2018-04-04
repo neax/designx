@@ -1,14 +1,13 @@
 // Alerts
 .alert {
-  @include padding($small-spacing / 1.5);
-
-  border-radius: $base-border-radius;
-  color: $white;
-  font-weight: $font-semi-bold;
-  margin-bottom: $small-spacing;
+  @include padding(--spacing / 1.5);
+  border-radius: var(--base-border-radius);
+  color: var(--white);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: calc(var(--spacing) / 2);
   text-align: center;
   width: 100%;
-  z-index: 99;
+  z-index: 99;  
 
   &.fixed {
     @include position(fixed, null 0 0 0);
@@ -31,8 +30,8 @@
 .alert-close {
   cursor: pointer;
   float: right;
-  line-height: $base-line-height;
-  margin-right: $small-spacing / 2;
+  line-height: var(--base-line-height);
+  margin-right: --spacing / 2;
 
   // Alert colors close icon
 

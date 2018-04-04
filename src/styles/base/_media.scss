@@ -5,11 +5,12 @@ figure {
     position: relative;
 
     figcaption {
-      @include padding($small-spacing / 2 $small-spacing);
+      @include padding(--small-spacing / 2 --small-spacing);
       @include position(absolute, null 0 0 0);
 
-      background: rgba($black, .3);
-      color: $white;
+      // background: rgba(--black, .3);
+      background: color(var(--black), rgba .3);
+      color: --white;
       display: none;
     }
 
@@ -36,7 +37,7 @@ picture {
 }
 
 figcaption {
-  color: $medium-gray;
+  color: --medium-gray;
   font-size: 95%;
   text-align: center;
 }

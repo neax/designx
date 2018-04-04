@@ -1,7 +1,7 @@
 ul,
 ol {
   margin: 0;
-  margin-left: $base-spacing;
+  margin-left: --base-spacing;
   padding: 0;
 
   &.unstyled {
@@ -14,7 +14,7 @@ ol {
 
     li {
       display: inline-block;
-      margin-right: $small-spacing;
+      margin-right: --small-spacing;
 
       &:last-child {
         margin-right: 0;
@@ -36,7 +36,7 @@ dl {
 }
 
 dt {
-  font-weight: $font-semi-bold;
+  font-weight: --font-semi-bold;
   margin: 0;
 }
 
