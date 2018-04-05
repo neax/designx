@@ -7,6 +7,6 @@
 
 @import 'modules/table.css';
 @import 'modules/utilities.css';
-@import 'base/typography.css';
+@import 'modules/typography.css';
 
 @import 'base/_variables.css';
