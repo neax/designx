@@ -6,8 +6,8 @@
 
   /* Typography */
   --base-font-family: 'proximasoft', sans-serif;
-  --code-font-family: --base-font-family;
-  --heading-font-family: --base-font-family;
+  --code-font-family: var(--base-font-family);
+  --heading-font-family: var(--base-font-family);
 
   /* Font awesome */
   --font-awesome-solid: 'Font Awesome 5 Solid';
@@ -15,14 +15,14 @@
   --font-awesome-light: 'Font Awesome 5 Light';
 
   /* Line height */
-  --base-line-height: 1.618rem;
+  --base-line-height: 1.618;
   --heading-line-height: 100%;
 
   /* Other sizes */
   --base-border-radius: 3px;
   --base-spacing: calc(var(--base-line-height) * 1rem);
   --spacing: var(--base-spacing);
-  --small-spacing: --base-spacing / 2;
+  --small-spacing: var(--base-spacing) / 2;
   --base-z-index: 0;
 
   /* Font sizes */
