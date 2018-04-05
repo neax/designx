@@ -29,24 +29,6 @@
           <router-view></router-view>
         </div>
       </div>
-      <div style="wodth: 1000px;">
-      <table class="auto striped">
-        <thead>
-          <th>A</th>
-          <th>B</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Uno</td>
-            <td>Dos</td>
-          </tr>
-          <tr>
-            <td>Uno</td>
-            <td>Dos</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
     </main>
 
     <alert color="green" close>
