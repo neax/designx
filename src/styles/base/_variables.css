@@ -1,4 +1,11 @@
 :root {
+  /* Base sizes */
+  --base-border-radius: 3px;
+  --base-spacing: calc(var(--base-line-height) * 1rem);
+  --spacing: var(--base-spacing);
+  --small-spacing: var(--base-spacing) / 2;
+  --base-z-index: 0;
+
   /* Breakpoints */
   --small-screen: 540px;
   --medium-screen: 720px;
@@ -6,6 +13,9 @@
 
   /* Global sizes */
   --main-width: 1020px;
+
+  /* Grids */
+  --grid-gap: var(--base-spacing);
 
   /* Typography */
   --base-font-family: 'proximasoft', sans-serif;
@@ -20,13 +30,6 @@
   /* Line height */
   --base-line-height: 1.618;
   --heading-line-height: 100%;
-
-  /* Other sizes */
-  --base-border-radius: 3px;
-  --base-spacing: calc(var(--base-line-height) * 1rem);
-  --spacing: var(--base-spacing);
-  --small-spacing: var(--base-spacing) / 2;
-  --base-z-index: 0;
 
   /* Font sizes */
   --big-font-size: 1.3rem;
