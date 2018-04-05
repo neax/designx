@@ -1,9 +1,6 @@
 // Grids
 $grid-gap: $base-spacing;
 
-// Main
-$main-width: 1020px;
-
 // Colors
 $colors: (
   'blue': ($blue, $white),
@@ -14,20 +11,18 @@ $colors: (
   'sky-blue': ($sky-blue, $white),
   'yellow': ($yellow, $dark-gray),
   'brown': ($brown, $white),
-  'gray': ($dark-gray, $white),
+  'gray': ($dark-gray, $white)
 );
 
 $grayscale-colors: (
   'dark-gray': ($dark-gray, $white),
   'medium-gray': ($medium-gray, $white),
-  'light-gray': ($light-gray, $dark-gray),
+  'light-gray': ($light-gray, $dark-gray)
 );
 
 $all-colors: map-merge($grayscale-colors, $colors);
 
-$semantic-colors: (
-  'primary': ($action-color, $white),
-);
+$semantic-colors: ('primary': ($action-color, $white));
 
 $all-semantic-colors: map-merge($all-colors, $semantic-colors);
 
