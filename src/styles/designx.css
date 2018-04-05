@@ -6,6 +6,7 @@
 /* @import 'normalize.css/normalize.css'; */
 
 @import 'modules/main.css';
+@import 'modules/sidebar.css';
 @import 'modules/table.css';
 @import 'modules/utilities.css';
 @import 'modules/typography.css';

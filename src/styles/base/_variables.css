@@ -65,6 +65,9 @@
   --medium-gray: #999;
   --light-gray: #ddd;
 
+  /* Action color */
+  --action-color: var(--blue);
+
   /* Gray scale */
   --gray: var(--dark-gray);
   --gray-10: color(var(--dark-gray) l(90));
@@ -108,7 +111,7 @@
   --alert-close-icon: '\f00d';
 
   /* Font Colors */
-  --base-font-color: color(var(--dark-grey));
+  --base-font-color: color(var(--dark-gray));
   $action-color: nth(map-get(map-merge($colors, $grayscale-colors), $action-color), 1);
 
   /* Border */
