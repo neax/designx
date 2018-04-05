@@ -4,6 +4,9 @@
   --medium-screen: 720px;
   --large-screen: 960px;
 
+  /* Global sizes */
+  --main-width: 1020px;
+
   /* Typography */
   --base-font-family: 'proximasoft', sans-serif;
   --code-font-family: var(--base-font-family);
