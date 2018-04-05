@@ -2,8 +2,10 @@
 
 /* @import '~bourbon/core/bourbon';
 @import '~bourbon-neat/app/assets/stylesheets/neat';
-@import '~normalize.css/normalize.css';
 @import 'web'; */
+/* @import 'normalize.css/normalize.css'; */
+
+@import 'modules/_table.css';
+@import 'modules/_utilities.css';
 
 @import 'base/_variables.css';
-@import 'modules/_utilities.css';

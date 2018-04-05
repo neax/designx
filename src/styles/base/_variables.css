@@ -21,6 +21,7 @@
   /* Other sizes */
   --base-border-radius: 3px;
   --base-spacing: calc(var(--base-line-height) * 1rem);
+  --spacing: var(--base-spacing);
   --small-spacing: --base-spacing / 2;
   --base-z-index: 0;
 
@@ -61,7 +62,7 @@
   --medium-gray: #999;
   --light-gray: #ddd;
 
-/* Gray scale */
+  /* Gray scale */
   --gray: var(--dark-gray);
   --gray-10: color(var(--dark-gray) l(90));
   --gray-20: color(var(--dark-gray) l(80));
