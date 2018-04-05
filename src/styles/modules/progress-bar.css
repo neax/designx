@@ -1,0 +1,62 @@
+/*
+* Progress bar
+*/
+
+.progress-bar {
+  border-radius: var(--base-border-radius);
+  border: 1px solid var(--light-gray);
+  padding: 2px;
+  background-color: white;
+}
+
+.progress-bar-content {
+  text-align: center;
+  border-radius: var(--base-border-radius);
+  display: block;
+  padding: 0 2px;
+  max-width: 100%;
+  color: var(--white);
+
+  /* Colors */
+  &.blue {
+    background-color: var(--blue);
+  }
+  &.green {
+    background-color: var(--green);
+  }
+  &.red {
+    background-color: var(--red);
+  }
+  &.orange {
+    background-color: var(--orange);
+  }
+  &.purple {
+    background-color: var(--purple);
+  }
+  &.sky-blue {
+    background-color: var(--sky-blue);
+  }
+  &.yellow {
+    background-color: var(--yellow);
+  }
+  &.brown {
+    background-color: var(--brown);
+  }
+  &.gray {
+    background-color: var(--gray);
+  }
+  &.dark-gray {
+    background-color: var(--dark-gray);
+  }
+  &.medium-gray {
+    background-color: var(--medium-gray);
+  }
+  &.light-gray {
+    background-color: var(--light-gray);
+  }
+
+  /* Primary color */
+  &.primary {
+    background-color: var(--action-color);
+  }
+}
