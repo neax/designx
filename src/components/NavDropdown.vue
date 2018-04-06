@@ -39,10 +39,10 @@ export default {
 
 .nav-dropdown-content {
   position: absolute;
-  /* top: null;
+  top: null;
   right: 0;
   bottom: null;
-  left: null; */
+  left: null;
 
   background-color: var(--action-color);
   display: none;

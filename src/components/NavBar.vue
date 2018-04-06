@@ -81,28 +81,24 @@ nav .badge {
 .nav-right a{
   padding: 0 calc(var(--base-spacing) / 2);
 
-
-.nav-right a:not(:nth-last-child(1)) { 
-  display: none;
-}
-
-.nav-right a:last-child {
-  display: inline-block;
-} 
-
-@media only screen and (min-width: 850px) {
-  .nav-right a:not(:nth-last-child(1)) {
-    display: inline-block;
-  }
-  .nav-right a:last-child {
+  .nav-right a:not(:nth-last-child(1)) { 
     display: none;
+  }
+
+  .nav-right a:last-child {
+    display: inline-block;
   } 
-}
+
+  @media only screen and (min-width: 850px) {
+    .nav-right a:not(:nth-last-child(1)) {
+      display: inline-block;
+    }
+    .nav-right a:last-child {
+      display: none;
+    } 
+  }
 }
 
-/* .nav-right a:last-child {
-  display: none;
-}  */
 
 .nav-logo{
   font-size: var(--big-font-size);
