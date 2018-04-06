@@ -1,10 +1,3 @@
-/* $action-color: 'blue'; */
-
-/* @import '~bourbon/core/bourbon';
-@import '~bourbon-neat/app/assets/stylesheets/neat';
-@import 'web'; */
-/* @import 'normalize.css/normalize.css'; */
-
 @import 'modules/main.css';
 @import 'modules/sidebar.css';
 @import 'modules/table.css';
@@ -19,4 +12,4 @@
 @import 'modules/progress-bar.css';
 @import 'modules/typography.css';
 
-@import 'base/_variables.css';
+@import 'base/variables.css';
