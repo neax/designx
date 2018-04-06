@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <NavBar>
+    <Navbar>
       <template slot="logo">
         <a href="#"><i class="fas fa-cube"></i> DesignX</a>
       </template>
@@ -12,7 +12,7 @@
           <a href="#">First link</a>
         </NavDropdown>
       </template>
-    </NavBar>
+    </Navbar>
 
     <main>
       <h1 class="page-title">Cheasheet</h1>
@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import NavBar from './components/NavBar'
+import Navbar from './components/Navbar'
 import Alert from './components/Alert'
 import Module from './custom/Module'
 import Modal from './components/Modal'
@@ -58,7 +58,7 @@ export default {
     }
   },
   components: {
-    NavBar,
+    Navbar,
     Module,
     Alert,
     Modal,
