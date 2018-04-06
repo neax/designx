@@ -68,8 +68,80 @@
   --medium-gray: #999;
   --light-gray: #ddd;
 
+  --blue-theme: {
+    --primary: var(--blue);
+    --primary-800: color(var(--blue) shade(12.5%));
+    --secondary: var(--white);
+  }
+  --green-theme: {
+    --primary: var(--green);
+    --primary-800: color(var(--green) shade(12.5%));
+    --secondary: var(--white);
+  }
+  --red-theme: {
+    --primary-800: color(var(-- --red) shade(12.5%));
+    --primary: var(--red);
+    --secondary: var(--white);
+  }
+  --orange-theme: {
+    --primary: var(--orange);
+    --primary-800: color(var(--orange) shade(12.5%));
+    --secondary: var(--white);
+  }
+  --purple-theme: {
+    --primary: var(--purple);
+    --primary-800: color(var(--purple) shade(12.5%));
+    --secondary: var(--white);
+  }
+  --sky-blue-theme: {
+    --primary: var(--sky-blue);
+    --primary-800: color(var(--sky-blue) shade(12.5%));
+    --secondary: var(--white);
+  }
+  --yellow-theme: {
+    --primary: var(--yellow);
+    --primary-800: color(var(--yellow) shade(12.5%));
+    --secondary: var(--dark-gray);
+  }
+  --brown-theme: {
+    --primary: var(--brown);
+    --primary-800: color(var(--brown) shade(12.5%));
+    --secondary: var(--white);
+  }
+  --white-theme: {
+    --primary: var(--white);
+    --primary-800: color(var(--white) shade(12.5%));
+    --secondary: var(--dark-gray);
+  }
+  --black-theme: {
+    --primary: var(--black);
+    --primary-800: color(var(--black) shade(12.5%));
+    --secondary: var(--white);
+  }
+  --dark-gray-theme: {
+    --primary: var(--dark-gray);
+    --primary-800: color(var(--dark-gray) shade(12.5%));
+    --secondary: var(--white);
+  }
+  --medium-gray-theme: {
+    --primary: var(--medium-gray);
+    --primary-800: color(var(--medium-gray) shade(12.5%));
+    --secondary: var(--white);
+  }
+  --light-gray-theme: {
+    --primary: var(--light-gray);
+    --primary-800: color(var(--light-gray) shade(12.5%));
+    --secondary: var(--dark-gray);
+  }
+  --primary-theme: {
+    @apply --blue-theme;
+  }
+
+  /* Colors theme */
+
   /* Action color */
   --action-color: var(--blue);
+  --action-color-comp: var(--blue-comp);
 
   /* Gray scale */
   --gray: var(--dark-gray);

@@ -15,48 +15,51 @@
   display: block;
   padding: 0 2px;
   max-width: 100%;
-  color: var(--white);
+
+  @apply --primary-theme;
+
+  background-color: var(--primary);
+  color: var(--secondary);
 
   /* Colors */
+  /* Colors */
   &.blue {
-    background-color: var(--blue);
+    @apply --blue-theme;
   }
   &.green {
-    background-color: var(--green);
+    @apply --green-theme;
   }
   &.red {
-    background-color: var(--red);
+    @apply --red-theme;
   }
   &.orange {
-    background-color: var(--orange);
+    @apply --orange-theme;
   }
   &.purple {
-    background-color: var(--purple);
+    @apply --purple-theme;
   }
   &.sky-blue {
-    background-color: var(--sky-blue);
+    @apply --sky-blue-theme;
   }
   &.yellow {
-    background-color: var(--yellow);
+    @apply --yellow-theme;
   }
   &.brown {
-    background-color: var(--brown);
+    @apply --brown-theme;
   }
-  &.gray {
-    background-color: var(--gray);
+  &.white {
+    @apply --white-theme;
+  }
+  &.black {
+    @apply --black-theme;
   }
   &.dark-gray {
-    background-color: var(--dark-gray);
+    @apply --dark-gray-theme;
   }
   &.medium-gray {
-    background-color: var(--medium-gray);
+    @apply --medium-gray-theme;
   }
   &.light-gray {
-    background-color: var(--light-gray);
-  }
-
-  /* Primary color */
-  &.primary {
-    background-color: var(--action-color);
+    @apply --light-gray-theme;
   }
 }
