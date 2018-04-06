@@ -51,7 +51,7 @@ export default {
   z-index: 999999;
 }
 
-  .nav-dropdown-content a{
+.nav-dropdown-content a{
   display: block;
   text-align: right;
 }
