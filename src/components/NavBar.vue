@@ -168,32 +168,32 @@ nav .badge {
   text-align: right;
   width: 160px;
   z-index: 99;
+
+  a {
+    padding: var(--small-spacing) var(--base-spacing);
+    color: var(--white);
+  
+    display: block;
+    font-weight: var(--font-bold);
+  }
+
+  &:active,
+
+  &:hover {
+    color: white;
+    background-color: var(--dark-gray);
+  }
+
+  &:sub-option {
+    padding: calc(var(--small-spacing) / 2) var(--base-spacing);
+    color: rgba(255,255,255,0.7);
+    font-weight: var(--font-regular);
+  }
+
+  &:sub-option.active {
+    color: rgba(255,255,255,0.9);
+    background-color: color(var(--dark-grey) lighten 2%);
+  }
 }
-
-.nav-responsive a {
-  padding: var(--small-spacing) var(--base-spacing);
-  color: var(--white);
-
-  display: block;
-  font-weight: var(--font-bold);
-}
-
-.nav-responsive a:active,
-    
-.nav-responsive a:hover {
-  color: white;
-  background-color: var(--dark-gray);
-}
-
-.nav-responsive a.sub-option {
-  padding: calc(var(--small-spacing) / 2) var(--base-spacing);
-  color: rgba(255,255,255,0.7);
-  font-weight: var(--font-regular);
-}
-
-.nav-responsive a.sub-option.active {
-  color: rgba(255,255,255,0.9);
-  background-color: color(var(--dark-grey) lighten 2%);
-} 
 
 </style>
