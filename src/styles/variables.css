@@ -8,8 +8,9 @@
 
   /* Breakpoints */
   --small-screen: 540px;
-  --medium-screen: 720px;
   --large-screen: 960px;
+
+  @custom-media --medium-screen (width > 720px);
 
   /* Global sizes */
   --main-width: 1020px;
@@ -164,7 +165,6 @@
 
   /* Breadcrumbs */
   --breadcrumb-divider: '\f105';
-
   --alert-close-icon: '\f00d';
 
   /* Font Colors */
