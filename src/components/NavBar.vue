@@ -97,11 +97,11 @@ nav {
   }
 }
 
-.nav-logo{
+.nav-logo {
   font-size: var(--big-font-size);
   font-weight: var(--font-semi-bold);
 
-  & a{
+  & a {
     &:hover {
       background-color: inherit;  
     }
