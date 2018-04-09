@@ -18,7 +18,6 @@ export default {
 </script>
 
 <style>
-@import '../styles/base/_variables.css';
 @import '../styles/designx.css';
 
 .nav-dropdown {

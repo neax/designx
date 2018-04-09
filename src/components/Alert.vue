@@ -35,15 +35,14 @@ export default {
 </script>
 
 <style scoped>
-@import '../styles/base/_variables.css';
 @import '../styles/variables.css';
 
 .alert {
-  padding: calc(var(--spacing) / 1.5);
+  padding: calc(var(--small-spacing) / 1.5);
   border-radius: var(--base-border-radius);
   color: var(--white);
   font-weight: var(--font-semi-bold);
-  margin-bottom: calc(var(--spacing) / 2);
+  margin-bottom: var(--spacing);
   text-align: center;
   width: 100%;
   z-index: 99;  
@@ -62,6 +61,47 @@ export default {
     left: 0;
 
     border-radius: 0;
+  }
+
+  /* Colors */
+  &.blue {
+    @apply --blue-theme;
+  }
+  &.green {
+    @apply --green-theme;
+  }
+  &.red {
+    @apply --red-theme;
+  }
+  &.orange {
+    @apply --orange-theme;
+  }
+  &.purple {
+    @apply --purple-theme;
+  }
+  &.sky-blue {
+    @apply --sky-blue-theme;
+  }
+  &.yellow {
+    @apply --yellow-theme;
+  }
+  &.brown {
+    @apply --brown-theme;
+  }
+  &.white {
+    @apply --white-theme;
+  }
+  &.black {
+    @apply --black-theme;
+  }
+  &.dark-gray {
+    @apply --dark-gray-theme;
+  }
+  &.medium-gray {
+    @apply --medium-gray-theme;
+  }
+  &.light-gray {
+    @apply --light-gray-theme;
   }
 }
 

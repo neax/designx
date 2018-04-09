@@ -1,20 +1,22 @@
-.sidebar a {
-  color: var(--medium-gray);
-  display: block;
-  font-weight: var(--font-semi-bold);
-  margin-bottom: calc(var(--spacing) / 2);
+.sidebar {
+  & a {
+    color: var(--medium-gray);
+    display: block;
+    font-weight: var(--font-semi-bold);
+    margin-bottom: calc(var(--spacing) / 2);
 
-  &:hover,
-  &.active {
-    color: var(--action-color);
+    &:hover,
+    &.active {
+      color: var(--action-color);
+    }
   }
-}
 
-.sidebar h3 {
-  margin-bottom: calc(var(--spacing) / 1.5);
+  & h3 {
+    margin-bottom: calc(var(--spacing) / 1.5);
 
-  &:not(:first-child) {
-    margin-top: var(--spacing);
+    &:not(:first-child) {
+      margin-top: var(--spacing);
+    }
   }
 }
 

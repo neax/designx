@@ -20,7 +20,6 @@ export default {
 </script>
 
 <style>
-@import '../styles/base/_variables.css';
 @import '../styles/designx.css';
 
 nav {
@@ -32,7 +31,7 @@ nav {
   text-align: center;
   width: 100%;
 
-  @media only screen and (min-width: 720px) {
+  @media only screen and (--medium-screen) {
     text-align: inherit;
   }
   
@@ -49,7 +48,7 @@ nav {
       text-decoration: none;
     }
 
-    & .active {
+    &.active {
       background-color: color(var(--action-color) shade (5%));
     }
   }
@@ -75,22 +74,21 @@ nav {
 
   float: right;
 
-  &a {
-
+  & a {
     &:not(:nth-last-child(1)) {
       display: none;
     }
 
-    &:last-child {
+    &.last-child {
       display: inline-block;
     }
 
-    @media only screen and (min-width: 850px) {
+    @media only screen and (--medium-screen) {
       &:not(:nth-last-child(1)) {
         display: inline-block;
       }
 
-      &:last-child {
+      &.last-child {
         display: none;
       }
     }
@@ -105,7 +103,7 @@ nav {
     &:hover {
       background-color: inherit;  
     }
-    &.active {
+    &:active {
       background-color: transparent;  
     }
   }
