@@ -1,0 +1,22 @@
+/*
+* Pagination
+*/
+
+.pagination {
+  & a {
+    padding: calc(var(--spacing) / 3) var(--spacing);
+    border-radius: --var(base-border-radius);
+    color: --var(dark-gray);
+    font-weight: var(--font-semi-bold);
+
+    &:hover,
+    &:focus {
+      background-color: color(var(--white), shade(4%));
+    }
+
+    &.active {
+      background-color: var(--action-color);
+      color: var(--white);
+    }
+  }
+}
