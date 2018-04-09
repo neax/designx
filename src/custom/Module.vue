@@ -7,40 +7,40 @@
       <tr>
         <td>Module tag / class</td>
         <td v-if="module.module">
-          <template v-for="(tagClass, index) in module.module">
+          <span v-for="(tagClass, index) in module.module" :key="tagClass">
             <code>{{ tagClass }}</code>
             <template v-if="index + 1 < module.module.length"><br></template>
-          </template>
+          </span>
         </td>
         <td v-else>-</td>
       </tr>
       <tr>
         <td>Components</td>
         <td v-if="module.components">
-          <template v-for="(component, index) in module.components">
+          <span v-for="(component, index) in module.components" :key="component">
             <code>{{ component }}</code>
             <template v-if="index + 1 < module.components.length"><br></template>
-          </template>
+          </span>
         </td>
         <td v-else>-</td>
       </tr>
       <tr>
         <td>States</td>
         <td v-if="module.states">
-          <template v-for="(component, index) in module.states">
+          <span v-for="(component, index) in module.states" :key="component">
             <code>{{ component }}</code>
             <template v-if="index + 1 < module.states.length"><br></template>
-          </template>
+          </span>
         </td>
         <td v-else>-</td>
       </tr>
       <tr>
         <td>Modifiers</td>
         <td v-if="module.modifiers">
-          <template v-for="(component, index) in module.modifiers">
+          <span v-for="(component, index) in module.modifiers" :key="component">
             <code>{{ component }}</code>
             <template v-if="index + 1 < module.modifiers.length"><br></template>
-          </template>
+          </span>
         </td>
         <td v-else>-</td>
       </tr>
@@ -49,18 +49,17 @@
 
     <h3>Example</h3>
 
-    <pre v-for="example in module.examples">{{ example.code }}</pre>
+    <pre v-for="example in module.examples" :key="example.id">{{ example.code }}</pre>
   </div>
 </template>
 
 <script>
-
 import ModulesData from '../data/ModulesData'
 
 export default {
   name: 'module',
   computed: {
-    module () {
+    module() {
       const moduleId = this.$route.params.moduleId || 'nav'
       return ModulesData.modules.find(obj => obj.id === moduleId)
     }
