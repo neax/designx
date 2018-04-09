@@ -37,20 +37,20 @@ nav {
   }
   
   & a {
-    padding: 0 var(--small-spacing);
-
+    padding: 0 calc(var(--small-spacing));
+    
     color: var(--white);
     display: inline-block;
     line-height: var(--navbar-height);
 
-    &:hover {
-      background-color: color(var(--action-color) darken 5%);
+    & :hover {
+      background-color: color(var(--action-color) shade (5%));
       color: var(--white);
       text-decoration: none;
     }
 
-    &:active {
-      background-color: color(var(--action-color) darken 5%);
+    & .active {
+      background-color: color(var(--action-color) shade (5%));
     }
   }
 
@@ -59,7 +59,7 @@ nav {
     z-index: 99;
   }
 
-  .badge {
+  &.badge {
     padding: calc(var(--small-spacing) / 4.5 ) calc(var(--small-spacing) / 2);
 
     font-size: 0.7rem;
@@ -75,25 +75,22 @@ nav {
 
   float: right;
 
-  & a{
-    padding: 0 calc(var(--base-spacing) / 2);
+  &a {
 
-    @nest a & {
-      &:not(:nth-last-child(1)) {
-        display: none;
-      }
-      &:last-child {
-        display: inline-block;
-      }
+    &:not(:nth-last-child(1)) {
+      display: none;
+    }
+
+    &:last-child {
+      display: inline-block;
     }
 
     @media only screen and (min-width: 850px) {
-
-      not(:nth-last-child(1)) {
+      &:not(:nth-last-child(1)) {
         display: inline-block;
       }
 
-      last-child {
+      &:last-child {
         display: none;
       }
     }
@@ -104,12 +101,13 @@ nav {
   font-size: var(--big-font-size);
   font-weight: var(--font-semi-bold);
 
-  & a:hover {
-    background-color: inherit;
-  }
-
-  & a:active {
-    background-color: transparent;
+  & a{
+    &:hover {
+      background-color: inherit;  
+    }
+    &.active {
+      background-color: transparent;  
+    }
   }
 
   & i,
@@ -118,7 +116,6 @@ nav {
   }
 }
 
-
 .nav-avatar {
   display: inline-block;
   line-height: 0;
@@ -126,7 +123,8 @@ nav {
   vertical-align: middle;
 
   & img {
-    size: 30px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
   }
 }
@@ -138,8 +136,6 @@ nav {
     position: absolute;
     top: 10px;
     right: 5px;
-    bottom: null;
-    left: null;
 
     background-color: var(--red);
     border-radius: var(--base-border-radius);
@@ -156,9 +152,8 @@ nav {
   top: 0;
   right: 0;
   bottom: 0;
-  left: null;
 
-  background-color: color(var(--dark-grey) lighten(5%));
+  background-color: color(var(--dark-grey) tint(5%));
   color: var(--white);
   display: none;
   height: 100vh;
@@ -176,19 +171,20 @@ nav {
     display: block;
     font-weight: var(--font-bold);
 
+    &.active,
     &:hover {
       color: var(--white);
       background-color: var(--dark-gray);
     }
 
-    &:sub-option {
+    &.sub-option {
       padding: calc(var(--small-spacing) / 2) var(--base-spacing);
       color: rgba(255,255,255,0.7);
       font-weight: var(--font-regular);
 
       &.active {
-        color: rgba($white, 0.9);
-        background-color: color(var(--dark-gray) lighten 2%);
+        color: rgba(255,255,255,0.9);
+        background-color: color(var(--dark-gray) tint (2%));
       }
     }
   }

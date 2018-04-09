@@ -27,7 +27,7 @@ export default {
 
   &:hover {
     & .nav-dropdown-button {
-      background-color: color(var(--action-color) darken 5);
+      background-color: color(var(--action-color) shade (5%));
     }
 
     & .nav-dropdown-content {
@@ -38,10 +38,7 @@ export default {
 
 .nav-dropdown-content {
   position: absolute;
-  top: null;
   right: 0;
-  bottom: null;
-  left: null;
 
   background-color: var(--action-color);
   display: none;
