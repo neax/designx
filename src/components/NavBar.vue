@@ -42,7 +42,7 @@ nav {
     display: inline-block;
     line-height: var(--navbar-height);
 
-    & :hover {
+    &:hover {
       background-color: color(var(--action-color) shade (5%));
       color: var(--white);
       text-decoration: none;
