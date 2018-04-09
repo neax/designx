@@ -7,6 +7,7 @@ module.exports = {
       components: ['.nav-logo', '.nav-right'],
       examples: [
         {
+          id: 1,
           code: `
 <nav class="nav">
   <a class="nav-logo" href="#">
@@ -27,6 +28,7 @@ module.exports = {
       module: ['footer'],
       examples: [
         {
+          id: 1,
           code: `
 <footer>
   &copy; Neax
@@ -55,6 +57,7 @@ module.exports = {
       ],
       examples: [
         {
+          id: 1,
           code: `
 <div class="alert alert-green">
   <div class="alert-close"><i class="fas fa-times"></i></div>
@@ -63,6 +66,7 @@ module.exports = {
             `
         },
         {
+          id: 2,
           code: `
 <alert color="success" close=True>This is my text</alert>
             `
@@ -75,6 +79,7 @@ module.exports = {
       module: ['modal'],
       examples: [
         {
+          id: 1,
           code: `
 <button v-modal:Modal1> Button demo modal </button>
 <modal id="Modal1" title="My Title">
@@ -82,18 +87,18 @@ module.exports = {
 </modal> `
         },
         {
+          id: 2,
           code: `
 <a v-modal:Modal2> Text demo modal </a>
 <modal id="Modal2" title="My Title" closeIcon>
   Hello from modal!
-  <slot name="footer"> 
+  <slot name="footer">
     <!-- My footer -->
   </slot>
 </modal>
           `
         }
       ]
-
     }
   ]
 }
