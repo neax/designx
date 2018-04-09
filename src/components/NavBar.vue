@@ -78,15 +78,17 @@ nav {
   & a{
     padding: 0 calc(var(--base-spacing) / 2);
 
-    @nest a:not(:nth-last-child(1)) {
-      display: none;
-    }
-
-    @nest a:last-child {
-      display: inline-block;
+    @nest a & {
+      &:not(:nth-last-child(1)) {
+        display: none;
+      }
+      &:last-child {
+        display: inline-block;
+      }
     }
 
     @media only screen and (min-width: 850px) {
+
       not(:nth-last-child(1)) {
         display: inline-block;
       }
