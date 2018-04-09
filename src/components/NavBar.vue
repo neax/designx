@@ -24,7 +24,7 @@ export default {
 @import '../styles/designx.css';
 
 nav {
-  padding: 0 calc(var(--small-spacing) / 2);
+  padding: 0 var(--small-spacing);
   clearfix: both;
 
   background-color: var(--action-color);
@@ -188,7 +188,7 @@ nav {
 
       &.active {
         color: rgba($white, 0.9);
-        background-color: color(var(--dark-grey) lighten 2%);
+        background-color: color(var(--dark-gray) lighten 2%);
       }
     }
   }
