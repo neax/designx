@@ -22,20 +22,19 @@ export default {
 @import '../styles/designx.css';
 
 .nav-dropdown {
-  position: relative;
   display: inline-block;
-}
+  position: relative;
 
-.nav-dropdown:hover{ 
-}
+  &:hover {
+    & .nav-dropdown-button {
+      background-color: color(var(--action-color) darken 5);
+    }
 
-.nav-dropdown:hover .nav-dropdown-button {
-  background-color: color(var(--action-color) darken 5);
+    & .nav-dropdown-content {
+      display: block;
+    }
+  }
 }
-
-.nav-dropdown:hover .nav-dropdown-content {
-  display: block;
-} 
 
 .nav-dropdown-content {
   position: absolute;
@@ -49,14 +48,15 @@ export default {
   min-width: 120px;
   width: 100%;
   z-index: 999999;
+
+  & a {
+    display: block;
+    text-align: right;
+  }
 }
 
-.nav-dropdown-content a{
-  display: block;
-  text-align: right;
+.nav-dropdown-icon { 
+  margin-left: calc(var(--base-spacing) / 8);
 }
-
- .nav-dropdown-icon {
-} 
 
 </style>
