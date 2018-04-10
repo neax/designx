@@ -15,10 +15,10 @@ export default {
         error: 'red',
         warning: 'orange',
         info: 'yellow',
-        debug: 'purple',
+        debug: 'purple'
       }
 
-      if(this.color in colorMap) {
+      if (this.color in colorMap) {
         return colorMap[this.color]
       }
       return this.color
@@ -34,9 +34,7 @@ export default {
 }
 </script>
 
-<style scoped>
-@import '../styles/variables.css';
-
+<style>
 .alert {
   padding: calc(var(--small-spacing) / 1.5);
   border-radius: var(--base-border-radius);
@@ -45,11 +43,10 @@ export default {
   margin-bottom: var(--spacing);
   text-align: center;
   width: 100%;
-  z-index: 99;  
+  z-index: 99;
 
   @apply --primary-theme;
-  
-  /* Alerts colors */
+
   background-color: var(--primary);
   color: var(--secondary);
 
@@ -114,5 +111,4 @@ export default {
   /* Alert colors close icon */
   color: var(--secondary);
 }
-
 </style>

@@ -1,55 +1,67 @@
 <template lang="html">
-  <nav>
-    <span class="nav-logo">
-      <slot name="logo"></slot>
-    </span>
+  <div>
+    <nav>
+      <span class="nav-logo">
+        <slot name="logo"></slot>
+      </span>
+      <a v-on:click="responsive = !responsive" class="nav-responsive-button" id="navResponsiveButton"><i class="fas fa-bars"></i></a>
 
-    <slot name="left"></slot>
+      <div class="nav-left" :class="{ 'nav-responsive' : responsive }">
+        <slot name="left"></slot>
+      </div>
 
-    <div class="nav-right" v-if="$slots.right">
-      <slot name="right"></slot>
-      <a href="#" id="button-nav-responsive"><i class="fas fa-bars"></i></a>
-    </div>
-  </nav>
+
+      <div class="nav-right" v-if="$slots.right" :class="{ 'nav-responsive' : responsive }">
+        <slot name="right"></slot>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>
 export default {
-  props: ['title', 'icon']
+  props: ['title', 'icon'],
+  data: function() {
+    return {
+      responsive: false
+    }
+  }
 }
 </script>
 
 <style>
-@import '../styles/designx.css';
+@import '../styles/variables.css';
 
 nav {
-  padding: 0 var(--small-spacing);
+  padding: 0 calc(var(--spacing) / 2);
   clearfix: both;
-
-  background-color: var(--action-color);
+  box-sizing: border-box;
   position: relative;
   text-align: center;
   width: 100%;
 
-  @media only screen and (--medium-screen) {
+  @apply --primary-theme;
+  background-color: var(--primary);
+
+  @media (--medium-screen-up) {
     text-align: inherit;
   }
-  
+
   & a {
-    padding: 0 calc(var(--small-spacing));
-    
-    color: var(--white);
+    padding: 0 calc(var(--spacing) / 2);
+
+    color: var(--secondary);
     display: inline-block;
     line-height: var(--navbar-height);
 
     &:hover {
-      background-color: color(var(--action-color) shade (5%));
-      color: var(--white);
+      background-color: var(--primary-550);
+      color: var(--secondary);
       text-decoration: none;
     }
 
     &.active {
-      background-color: color(var(--action-color) shade (5%));
+      background-color: var(--primary-550);
     }
   }
 
@@ -59,7 +71,7 @@ nav {
   }
 
   &.badge {
-    padding: calc(var(--small-spacing) / 4.5 ) calc(var(--small-spacing) / 2);
+    padding: calc(var(--small-spacing) / 4.5) calc(var(--small-spacing) / 2);
 
     font-size: 0.7rem;
     line-height: var(--base-line-height);
@@ -68,30 +80,42 @@ nav {
   }
 }
 
-.nav-right {
-  display: flex;
-  flex-direction: row;
-
-  float: right;
+.nav-right,
+.nav-left {
+  text-align: center;
+  display: none;
 
   & a {
-    &:not(:nth-last-child(1)) {
-      display: none;
-    }
+    display: inline-block;
+  }
 
-    &.last-child {
-      display: inline-block;
+  &.nav-responsive {
+    @media (--medium-screen-down) {
+      display: block;
     }
+  }
+}
 
-    @media only screen and (--medium-screen) {
-      &:not(:nth-last-child(1)) {
-        display: inline-block;
-      }
+.nav-right {
+  @media (--medium-screen-up) {
+    display: flex;
+    flex-direction: row;
+    float: right;
+  }
+}
 
-      &.last-child {
-        display: none;
-      }
-    }
+.nav-left {
+  @media (--medium-screen-up) {
+    display: inline-block;
+  }
+}
+
+.nav-responsive-button {
+  float: right;
+  display: inline-block;
+
+  @media (--medium-screen-up) {
+    display: none;
   }
 }
 
@@ -101,10 +125,10 @@ nav {
 
   & a {
     &:hover {
-      background-color: inherit;  
+      background-color: inherit;
     }
     &:active {
-      background-color: transparent;  
+      background-color: transparent;
     }
   }
 
@@ -144,48 +168,4 @@ nav {
     text-align: center;
   }
 }
-
-.nav-responsive {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-
-  background-color: color(var(--dark-grey) tint(5%));
-  color: var(--white);
-  display: none;
-  height: 100vh;
-  margin-top: var(--navbar-height);
-  overflow: scroll;
-  padding-bottom: var(--vavbar-height);
-  text-align: right;
-  width: 160px;
-  z-index: 99;
-
-  & a {
-    padding: var(--small-spacing) var(--base-spacing);
-    color: var(--white);
-  
-    display: block;
-    font-weight: var(--font-bold);
-
-    &.active,
-    &:hover {
-      color: var(--white);
-      background-color: var(--dark-gray);
-    }
-
-    &.sub-option {
-      padding: calc(var(--small-spacing) / 2) var(--base-spacing);
-      color: rgba(255,255,255,0.7);
-      font-weight: var(--font-regular);
-
-      &.active {
-        color: rgba(255,255,255,0.9);
-        background-color: color(var(--dark-gray) tint (2%));
-      }
-    }
-  }
-}
-
 </style>

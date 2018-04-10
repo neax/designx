@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="nav-dropdown">
-    <a href="javascript:void(0)">
+    <a href="javascript:void(0)" class="nav-dropdown-button">
       {{ title }}
       <i class="fas fa-angle-down nav-dropdown-icon" v-if="icon"></i>
     </a>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style>
-@import '../styles/designx.css';
+@import '../styles/variables.css';
 
 .nav-dropdown {
   display: inline-block;
@@ -26,7 +26,7 @@ export default {
 
   &:hover {
     & .nav-dropdown-button {
-      background-color: color(var(--action-color) shade (5%));
+      background-color: color(var(--action-color) shade(5%));
     }
 
     & .nav-dropdown-content {
@@ -51,8 +51,12 @@ export default {
   }
 }
 
-.nav-dropdown-icon { 
+.nav-dropdown-icon {
   margin-left: calc(var(--base-spacing) / 8);
 }
 
+.nav-responsive {
+  & .nav-dropdown-content {
+  }
+}
 </style>

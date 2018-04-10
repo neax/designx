@@ -1,14 +1,6 @@
 /*
 * Buttons
 */
-
-:root {
-  --b: {
-    --primary: red;
-    --seconday: yellow;
-  }
-}
-
 .button {
   appearance: none;
   border-radius: var(--base-border-radius);
@@ -35,8 +27,8 @@
   color: var(--secondary);
 
   &:hover {
-    background-color: var(--primary-800);
-    border-color: var(--primary-800);
+    background-color: var(--primary-625);
+    border-color: var(--primary-625);
     color: var(--secondary);
   }
 
