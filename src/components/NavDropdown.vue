@@ -23,10 +23,11 @@ export default {
 .nav-dropdown {
   display: inline-block;
   position: relative;
+  @apply --primary-theme;
 
   &:hover {
     & .nav-dropdown-button {
-      background-color: color(var(--action-color) shade(5%));
+      background-color: var(--primary-550);
     }
 
     & .nav-dropdown-content {
@@ -39,7 +40,7 @@ export default {
   position: absolute;
   right: 0;
 
-  background-color: var(--action-color);
+  background-color: var(--primary);
   display: none;
   min-width: 120px;
   width: 100%;

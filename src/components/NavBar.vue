@@ -41,6 +41,7 @@ nav {
   width: 100%;
 
   @apply --primary-theme;
+
   background-color: var(--primary);
 
   @media (--medium-screen-up) {
