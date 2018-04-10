@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <Nav>
+    <Navbar>
       <template slot="logo">
         <a href="#"><i class="fas fa-cube"></i> DesignX</a>
       </template>
@@ -12,7 +12,7 @@
           <a href="#">First link</a>
         </NavDropdown>
       </template>
-    </Nav>
+    </Navbar>
 
     <main>
       <h1 class="page-title">Cheasheet</h1>
@@ -31,10 +31,6 @@
       </div>
     </main>
 
-    <alert color="green" close>
-      This is an alert!
-    </alert>
-
     <footer>
       &copy; Neax
     </footer>
@@ -43,7 +39,7 @@
 </template>
 
 <script>
-import Nav from './components/Nav'
+import Navbar from './components/Navbar'
 import Alert from './components/Alert'
 import Module from './custom/Module'
 import Modal from './components/Modal'
@@ -58,7 +54,7 @@ export default {
     }
   },
   components: {
-    Nav,
+    Navbar,
     Module,
     Alert,
     Modal,

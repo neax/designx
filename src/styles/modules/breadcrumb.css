@@ -7,7 +7,7 @@
   font-weight: var(--font-semi-bold);
   text-align: center;
 
-  @media (--medium-screen) {
+  @media (--medium-screen-up) {
     display: block;
     text-align: left;
   }

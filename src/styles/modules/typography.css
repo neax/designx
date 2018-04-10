@@ -63,6 +63,7 @@ hr {
 
 pre {
   color: var(--medium-gray);
+  overflow-y: scroll;
 }
 
 code {
