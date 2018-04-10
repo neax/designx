@@ -203,7 +203,7 @@
     [type='week'],
     input:not([type]);
 
-    /* Custom Selector Button */
-    @custom-selector :--all-buttons [type='button'], 
+  /* Custom Selector Button */
+  @custom-selector :--all-buttons [type='button'], 
     [type='reset'], [type='submit'];
 }
