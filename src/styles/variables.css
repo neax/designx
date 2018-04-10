@@ -172,7 +172,7 @@
 
   /* Border */
   --base-border-color: var(--light-gray);
-  --base-border: 1px solid --base-border-color;
+  --base-border: 1px solid var(--base-border-color);
 
   /* Background Colors */
   --base-background-color: var(--white);

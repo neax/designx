@@ -29,6 +29,31 @@
           <router-view></router-view>
         </div>
       </div>
+
+      <form>
+
+        <label>
+          <input type="checkbox"> Checkbox
+        </label>  
+        <label>
+          <input type="radio" checked name="x"> Radio
+        </label>
+        <label>
+            <input type="radio" name="x"> Radio2
+        </label>
+
+        <label for="name">Name</label>
+        <input type="email">
+
+        <select>
+          <option> a </option>
+          <option> b </option>
+          <option> c </option>
+        </select>
+        
+        <button class='button'>Submit</button>
+     </form>
+
     </main>
 
     <alert color="green" close>
