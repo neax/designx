@@ -187,7 +187,7 @@
 
   /* Border */
   --base-border-color: var(--light-gray);
-  --base-border: 1px solid --base-border-color;
+  --base-border: 1px solid var(--base-border-color);
 
   /* Background Colors */
   --base-background-color: var(--white);
@@ -199,4 +199,26 @@
 
   /* Navbar */
   --navbar-height: 54px;
+
+  /* Custom Selector Input*/
+  @custom-selector :--all-text-inputs
+    [type='color'],
+    [type='date'],
+    [type='datetime'],
+    [type='datetime-local'],
+    [type='email'],
+    [type='month'],
+    [type='number'],
+    [type='password'],
+    [type='search'],
+    [type='tel'],
+    [type='text'],
+    [type='time'],
+    [type='url'],
+    [type='week'],
+    input:not([type]);
+
+  /* Custom Selector Button */
+  @custom-selector :--all-buttons [type='button'], 
+    [type='reset'], [type='submit'];
 }

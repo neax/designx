@@ -1,43 +1,48 @@
 figure {
   margin: 0;
-
+  
   &.caption-hover {
     position: relative;
-
+    
     figcaption {
-      @include padding(--small-spacing / 2 --small-spacing);
-      @include position(absolute, null 0 0 0);
+      padding: calc(var(--small-spacing) / 2) calc(var(--small-spacing));
+      
+      position: absolute;
+      top: null;
+      right: 0;
+      bottom: 0;
+      left: 0;
 
-      // background: rgba(--black, .3);
       background: color(var(--black), rgba .3);
-      color: --white;
+      color: var(--white);
       display: none;
     }
-
+  
     img {
       display: block;
     }
-
+  
     &:hover {
       figcaption {
         display: block;
-      }
+       }
     }
   }
 }
-
+  
 img,
 picture {
   margin: 0;
   max-width: 100%;
-
+  
   &.cover {
     object-fit: cover;
   }
 }
-
+  
 figcaption {
-  color: --medium-gray;
+  color: var(--medium-gray);
   font-size: 95%;
   text-align: center;
 }
+  

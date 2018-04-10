@@ -14,5 +14,8 @@
 @import 'modules/breadcrumb.css';
 @import 'modules/progress-bar.css';
 @import 'modules/typography.css';
+@import 'modules/forms.css';
+@import 'modules/lists.css';
+@import 'modules/media.css';
 
 @import 'variables.css';
