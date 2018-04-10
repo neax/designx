@@ -33,23 +33,6 @@ textarea {
   font-size: 16px;
 }
 
-@custom-selector :--all-text-inputs
-  [type='color'],
-  [type='date'],
-  [type='datetime'],
-  [type='datetime-local'],
-  [type='email'],
-  [type='month'],
-  [type='number'],
-  [type='password'],
-  [type='search'],
-  [type='tel'],
-  [type='text'],
-  [type='time'],
-  [type='url'],
-  [type='week'],
-  input:not([type]);
-
 :--all-text-inputs , select[multiple] {
   appearance: none; 
   background-color: var(--base-background-color);
@@ -101,7 +84,6 @@ input[type='file'] {
   width: 100%;
 }
 
-@custom-selector :--all-buttons [type='button'], [type='reset'], [type='submit'];
 :--all-buttons , select {
   margin-bottom: calc(var(--small-spacing) * 1.5);
   margin-top: calc(var(--small-spacing / 2));

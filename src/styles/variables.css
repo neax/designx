@@ -184,4 +184,26 @@
 
   /* Navbar */
   --navbar-height: 54px;
+
+  /* Custom Selector Input*/
+  @custom-selector :--all-text-inputs
+    [type='color'],
+    [type='date'],
+    [type='datetime'],
+    [type='datetime-local'],
+    [type='email'],
+    [type='month'],
+    [type='number'],
+    [type='password'],
+    [type='search'],
+    [type='tel'],
+    [type='text'],
+    [type='time'],
+    [type='url'],
+    [type='week'],
+    input:not([type]);
+
+    /* Custom Selector Button */
+    @custom-selector :--all-buttons [type='button'], 
+    [type='reset'], [type='submit'];
 }
