@@ -1,7 +1,7 @@
 ul,
 ol {
   margin: 0;
-  margin-left: var(--base-spacing);
+  margin-left: var(--spacing);
   padding: 0;
 
   &.unstyled {
@@ -14,7 +14,7 @@ ol {
   
     li {
         display: inline-block;
-        margin-right: var(--small-spacing);
+        margin-right: var(--spacing);
 
         &:last-child {
             margin-right: 0;
