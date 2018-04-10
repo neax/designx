@@ -30,6 +30,11 @@
         </div>
       </div>
     </main>
+
+    <button v-modal:Modal1> Button demo modal </button>
+    <modal id="Modal1" title="My Title" closeIcon>
+      Hello from modal!
+    </modal>
     
     <footer>
       &copy; Neax
