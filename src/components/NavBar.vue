@@ -21,7 +21,7 @@
 <script>
 export default {
   props: ['title', 'icon'],
-  data: function() {
+  data() {
     return {
       responsive: false
     }

@@ -30,9 +30,6 @@
         </div>
       </div>
     </main>
-    <alert color="green" close>
-      This is an alert!
-    </alert>
 
     <footer>
       &copy; Neax

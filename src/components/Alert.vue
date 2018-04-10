@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="alert" :class="colorClass">
-    <div class="alert-close" v-if="close"><i class="fas fa-times"></i></div>
+  <div class="alert" :class="colorClass" v-if="display">
+    <div class="alert-close" v-if="close" v-on:click="display = false"><i class="fas fa-times"></i></div>
     <slot></slot>
   </div>
 </template>
@@ -8,6 +8,9 @@
 <script>
 export default {
   name: 'alert',
+  data() {
+    return { display: true }
+  },
   computed: {
     colorClass: function() {
       const colorMap = {
@@ -35,6 +38,8 @@ export default {
 </script>
 
 <style>
+@import '../styles/variables.css';
+
 .alert {
   padding: calc(var(--small-spacing) / 1.5);
   border-radius: var(--base-border-radius);
@@ -107,8 +112,5 @@ export default {
   float: right;
   line-height: var(--base-line-height);
   margin-right: calc(var(--spacing) / 2);
-
-  /* Alert colors close icon */
-  color: var(--secondary);
 }
 </style>
