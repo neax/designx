@@ -31,14 +31,30 @@
       </div>
     </main>
 
-    <button v-modal:Modal1> Button demo modal </button>
-    <modal id="Modal1" title="My Title" closeIcon>
-      Hello from modal!
-    </modal>
+    
     
     <footer>
       &copy; Neax
     </footer>
+
+    <form>
+      <label for="name">Name</label>
+      <input type="text" placeholder="A color placeholder text..">
+      <label for="email">Email address</label>
+      <input type="email">
+      <label>
+        <input type="checkbox"> Checkbox
+      </label>
+      <label>
+        <input type="radio" name="" checked> Herp
+      </label>
+      <label>
+        <input type="radio" name=""> Derp
+      </label>
+      <button type="submit" class="button">Submit</button>
+      <button type="button" class="button">Button</button>
+      <button type="reset" class="button">Reset</button>
+    </form>
 
   </div>
 </template>

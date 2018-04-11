@@ -14,7 +14,7 @@ ol {
   
     li {
         display: inline-block;
-        margin-right: var(--spacing);
+        margin-right: calc(var(--spacing) / 2);
 
         &:last-child {
             margin-right: 0;
