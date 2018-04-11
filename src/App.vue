@@ -30,7 +30,10 @@
         </div>
       </div>
     </main>
-    
+
+    <form>
+      <input type="text" placeholder="esto es una">
+    </form>
     <footer>
       &copy; Neax
     </footer>

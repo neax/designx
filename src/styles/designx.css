@@ -17,5 +17,9 @@
 @import 'modules/forms.css';
 @import 'modules/lists.css';
 @import 'modules/media.css';
+@import 'modules/alert.css';
+@import 'modules/navbar.css';
+@import 'modules/navdropdown.css';
+@import 'modules/modal.css';
 
 @import 'variables.css';

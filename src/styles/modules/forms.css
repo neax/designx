@@ -64,7 +64,7 @@ textarea {
   }
 
   &::placeholder {
-    color: color(var(--base-font-color) tint (40%));
+    color: color(var(--gray-40) tint (40%));
     line-height: var(--base-line-height);
   }
 }
@@ -91,7 +91,6 @@ input[type='file'] {
   box-sizing: border-box;
   transition: border-color var(--base-duration) var(--base-timing);
   
-  background-color: var(--base-background-color);
   border: var(--base-border);
   border-radius: var(--base-border-radius);
   height: 44px;
@@ -106,7 +105,7 @@ input[type='file'] {
 
 .input-icon-addon {
   display: flex;
-  border-left-radius: var(--base-border-radius);
+  border-top-left-radius: var(--base-border-radius);
   align-items: center;
   
   background-color: color(var(--light-gray) tint (7.25%));
@@ -125,5 +124,5 @@ input[type='file'] {
 .input-addon {
   display: flex;
   flex: 1 1 auto;
-  border-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
 }
