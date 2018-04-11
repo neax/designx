@@ -75,5 +75,5 @@ blockquote {
 
   border-left: 5px solid var(--medium-gray);
   color: var(--medium-gray);
-  padding-left: var(--base-spacing);
+  padding-left: var(--spacing);
 }

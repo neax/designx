@@ -85,8 +85,8 @@ export default {
 }
 
 .modal {
-  margin: calc(var(--base-spacing) * 2) auto;
-  padding: calc(var(--small-spacing) * 3);
+  margin: calc(var(--spacing) * 2) auto;
+  padding: calc(var(--spacing) * 1.5);
   transition: all 5s ease-in-out;
 
   background-color: $white;

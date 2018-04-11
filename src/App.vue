@@ -30,7 +30,7 @@
         </div>
       </div>
     </main>
-
+    
     <footer>
       &copy; Neax
     </footer>
