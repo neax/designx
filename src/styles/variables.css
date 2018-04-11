@@ -1,9 +1,7 @@
 :root {
   /* Base sizes */
   --base-border-radius: 3px;
-  --base-spacing: calc(var(--base-line-height) * 1rem);
-  --spacing: var(--base-spacing);
-  --small-spacing: var(--base-spacing) / 2;
+  --spacing: calc(var(--base-line-height) * 1rem);
   --base-z-index: 0;
 
   /* Breakpoints */
@@ -18,7 +16,7 @@
   --main-width: 1020px;
 
   /* Grids */
-  --grid-gap: var(--base-spacing);
+  --grid-gap: var(--spacing);
 
   /* Typography */
   --base-font-family: 'proximasoft', sans-serif;
