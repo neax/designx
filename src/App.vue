@@ -31,9 +31,6 @@
       </div>
     </main>
 
-    <form>
-      <input type="text" placeholder="esto es una">
-    </form>
     <footer>
       &copy; Neax
     </footer>
@@ -42,7 +39,7 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar'
+import Navbar from './components/NavBar'
 import Alert from './components/Alert'
 import Module from './custom/Module'
 import Modal from './components/Modal'
