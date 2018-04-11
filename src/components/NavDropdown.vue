@@ -53,7 +53,7 @@ export default {
 }
 
 .nav-dropdown-icon {
-  margin-left: calc(var(--base-spacing) / 8);
+  margin-left: calc(var(--spacing) / 8);
 }
 
 .nav-responsive {

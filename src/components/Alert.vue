@@ -41,7 +41,7 @@ export default {
 @import '../styles/variables.css';
 
 .alert {
-  padding: calc(var(--small-spacing) / 1.5);
+  padding: calc(var(--spacing) / 3.0);
   border-radius: var(--base-border-radius);
   color: var(--white);
   font-weight: var(--font-semi-bold);
