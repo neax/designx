@@ -47,7 +47,6 @@ textarea {
 
   &:hover {
     background-color: color(var(--base-background-color) shade (20%));
-    /* background-color: color(var(--base-border-color) shade (20%)); */
   }
 
   &:focus {
@@ -65,7 +64,6 @@ textarea {
   }
 
   &::placeholder {
-    /* color: color(var(--base-font-color) tint (40%)); */
     color: color(var(--gray-40) tint (40%));
     line-height: var(--base-line-height);
   }
