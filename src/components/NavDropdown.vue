@@ -2,7 +2,7 @@
   <div class="nav-dropdown">
     <a href="javascript:void(0)" class="nav-dropdown-button">
       {{ title }}
-      <i class="fas fa-angle-down nav-dropdown-icon" v-if="icon"></i>
+      <font-awesome-icon icon="angle-down" class="nav-dropdown-icon" v-if="icon" />
     </a>
     <div class="nav-dropdown-content">
       <slot></slot>
