@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <Nav>
+    <Navbar>
       <template slot="logo">
         <a href="#"><i class="fas fa-cube"></i> DesignX</a>
       </template>
@@ -12,7 +12,7 @@
           <a href="#">First link</a>
         </NavDropdown>
       </template>
-    </Nav>
+    </Navbar>
 
     <main>
       <h1 class="page-title">Cheasheet</h1>
@@ -39,12 +39,12 @@
 </template>
 
 <script>
-import Nav from './components/Nav'
+import Navbar from './components/NavBar'
 import Alert from './components/Alert'
 import Module from './custom/Module'
 import Modal from './components/Modal'
 import NavDropdown from './components/NavDropdown'
-import { modal }  from './directives/Modal'
+import { modal } from './directives/Modal'
 
 export default {
   name: 'app',
@@ -54,15 +54,14 @@ export default {
     }
   },
   components: {
-    Nav,
+    Navbar,
     Module,
     Alert,
     Modal,
     NavDropdown
-  }, 
+  },
   directives: {
     modal
   }
 }
 </script>
-    
